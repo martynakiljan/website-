@@ -4,7 +4,10 @@ import About from "./components/About/About";
 import Slider from "./components/Slider/Slider";
 import Services from "./components/Services/Services";
 import Counter from "./components/Counter/Counter";
+import Form from "./components/Form/Form";
+import Footer from "./components/Footer/Footer";
 import "./utilis/basic.scss";
+import ScrollToTop from "react-scroll-to-top";
 
 const App = () => {
   return (
@@ -18,6 +21,9 @@ const App = () => {
           <Counter />
         </div>
       </div>
+      <Form />
+      <ScrollToTop smooth />
+      <Footer />
     </div>
   );
 };

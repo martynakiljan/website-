@@ -1,0 +1,38 @@
+.footer {
+  height: 10vh;
+  color: var(--gray-color);
+}
+
+.footer__inner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: var(--main-color);
+    height: 1px;
+    top: 50%;
+  }
+
+  &::before {
+    left: 0;
+    width: 40%;
+  }
+  &::after {
+    right: 0;
+    width: 40%;
+  }
+}
+
+.footer-copyright {
+  padding: 0 10px;
+}
+
+.footer-company-name {
+  padding: 0 10px;
+}
