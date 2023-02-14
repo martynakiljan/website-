@@ -1,0 +1,42 @@
+.counter__inner {
+  padding: 50px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    background-image: radial-gradient(circle, #e8e8e8 20%, transparent 10%),
+      radial-gradient(circle, #e8e8e8 20%, transparent 10%);
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px;
+    opacity: 0.6;
+  }
+}
+
+.counter__item {
+  width: 50%;
+  z-index: 111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.counter__count {
+  font-size: 60px;
+  color: var(--second-color);
+  font-weight: bold;
+}
+
+.counter__text {
+  margin: 20px 0;
+}
