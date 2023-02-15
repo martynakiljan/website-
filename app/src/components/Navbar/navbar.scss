@@ -1,3 +1,5 @@
+@import '../../utilis/media-queries.scss';
+
 .nav {
   position: relative;
   height: 15vh;
@@ -12,6 +14,12 @@
   justify-content: space-between;
   color: var(--white-smoke-color);
   padding: 20px 0;
+  height: 100%;
+
+  @include xs {
+    flex-direction: column;
+    padding: 0;
+  }
 }
 
 .nav__meta-icon {
@@ -20,7 +28,7 @@
 
 .nav__meta {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   height: 100%;
 }
@@ -35,6 +43,14 @@
   &:last-child {
     border-right: none;
   }
+
+  @include xs {
+    padding: 0 10px;
+
+    svg {
+      padding: 10px 0;
+    }
+  }
 }
 
 .nav__meta-icon {
@@ -43,11 +59,24 @@
   svg {
     height: 30px;
     color: var(--gray-light-color);
+
+    @include xs {
+      height: 20px;
+      padding: 0 10px;
+    }
+  }
+
+  @include xs {
+    padding: 0;
   }
 }
 
 .nav__meta-text {
   text-align: right;
+
+  @include xs {
+    font-size: 10px;
+  }
 }
 
 .nav__meta-text {
@@ -67,4 +96,14 @@
 .nav__logo {
   color: var(--second-color);
   font-size: 30px;
+
+  @include xs {
+    padding-left: 20px;
+  }
+}
+
+.nav__meta-icon-facebook {
+  @include xs {
+    display: none;
+  }
 }

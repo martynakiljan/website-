@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="footer__inner">
         {" "}
         <FontAwesomeIcon icon={faCopyright} className="footer-copyright" />
-        <p>2022, </p>
+        <p>2022</p>
         <span className="footer-company-name"> Mat Bau</span>
       </div>
     </footer>

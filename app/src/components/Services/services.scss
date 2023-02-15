@@ -1,6 +1,12 @@
+@import '../../utilis/media-queries.scss';
+
 .services-tiles__inner {
   display: flex;
   min-height: 50vh;
+
+  @include xs {
+    flex-direction: column;
+  }
 }
 
 .services-tile {
@@ -17,6 +23,11 @@
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  @include xs {
+    width: 100%;
+    min-height: 50vh;
   }
 }
 
@@ -88,6 +99,11 @@
 
 .services__items-icons__inner {
   display: flex;
+
+  @include xs {
+    flex-direction: column;
+    padding: 20px;
+  }
 }
 
 .services__paragraph {

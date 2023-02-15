@@ -1,3 +1,5 @@
+@import '../../utilis/media-queries.scss';
+
 .footer {
   height: 10vh;
   color: var(--gray-color);
@@ -22,10 +24,18 @@
   &::before {
     left: 0;
     width: 40%;
+
+    @include xs {
+      width: 30%;
+    }
   }
   &::after {
     right: 0;
     width: 40%;
+
+    @include xs {
+      width: 30%;
+    }
   }
 }
 

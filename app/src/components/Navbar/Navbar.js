@@ -8,6 +8,7 @@ import { faPhone, faHouse, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import "font-awesome/css/font-awesome.min.css";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import Menu from "../Menu/Menu";
+import Burger from "../Burger/Burger";
 import "../Menu/menu.scss";
 
 const Navbar = () => {
@@ -39,7 +40,7 @@ const Navbar = () => {
                 </p>
               </div>
             </div>
-            <div className="nav__meta-item">
+            <div className="nav__meta-item nav__meta-fac-lan">
               <div className="nav__meta-icon nav__meta-icon-facebook">
                 <FontAwesomeIcon icon={faFacebookF} />
               </div>
@@ -49,6 +50,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+        <Burger className="burger"></Burger>
         <div className="menu">
           <div className="menu__inner">
             <Menu />
