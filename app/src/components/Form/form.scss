@@ -1,3 +1,7 @@
+.local-bootstrap {
+  @import '~bootstrap/scss/bootstrap';
+}
+
 .form {
   min-height: 50vh;
   background-color: var(--second-color);
@@ -9,4 +13,9 @@
   text-align: center;
   padding: 50px 0;
   width: 100%;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
 }

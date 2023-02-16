@@ -1,14 +1,10 @@
 /** @format */
 import "./services.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPhone,
-  faHouse,
-  faGlobe,
-  faPaintRoller,
-} from "@fortawesome/free-solid-svg-icons";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+import "animate.css/animate.min.css";
+import { faPaintRoller } from "@fortawesome/free-solid-svg-icons";
 import "font-awesome/css/font-awesome.min.css";
-import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 
 const Services = () => {
   return (
@@ -51,24 +47,30 @@ const Services = () => {
       <div className="services__items-icons">
         <h3 className="title services__items-title">Our Services</h3>
         <div className="services__items-icons__inner">
-          <div className="services__service">
-            <FontAwesomeIcon icon={faPaintRoller} />
-            <p className="services__paragraph">
-              vero eos et accusam et justo duo dolores et ea rebum.
-            </p>
-          </div>
-          <div className="services__service">
-            <FontAwesomeIcon icon={faPaintRoller} />
-            <p className="services__paragraph">
-              vero eos et accusam et justo duo dolores et ea rebum.
-            </p>
-          </div>
-          <div className="services__service">
-            <FontAwesomeIcon icon={faPaintRoller} />
-            <p className="services__paragraph">
-              vero eos et accusam et justo duo dolores et ea rebum.
-            </p>
-          </div>
+          <AnimationOnScroll animateIn="animate__fadeInLeftBig">
+            <div className="services__service">
+              <FontAwesomeIcon icon={faPaintRoller} />
+              <p className="services__paragraph">
+                vero eos et accusam et justo duo dolores et ea rebum.
+              </p>
+            </div>
+          </AnimationOnScroll>
+          <AnimationOnScroll animateIn="animate__fadeInLeftBig">
+            <div className="services__service">
+              <FontAwesomeIcon icon={faPaintRoller} />
+              <p className="services__paragraph">
+                vero eos et accusam et justo duo dolores et ea rebum.
+              </p>
+            </div>
+          </AnimationOnScroll>{" "}
+          <AnimationOnScroll animateIn="animate__fadeInLeftBig">
+            <div className="services__service">
+              <FontAwesomeIcon icon={faPaintRoller} />
+              <p className="services__paragraph">
+                vero eos et accusam et justo duo dolores et ea rebum.
+              </p>
+            </div>
+          </AnimationOnScroll>
         </div>
       </div>
     </>

@@ -47,7 +47,6 @@
 
 .about__right-text {
   color: var(--gray-light-color);
-  line-height: 2;
 }
 
 .about__right-button {
@@ -55,4 +54,8 @@
   padding: 10px 20px;
   margin: 20px 0;
   color: var(--main-color);
+}
+
+.about__text {
+  line-height: 1.5;
 }
