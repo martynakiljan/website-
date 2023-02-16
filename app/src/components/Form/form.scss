@@ -1,10 +1,12 @@
-.local-bootstrap {
-  @import '~bootstrap/scss/bootstrap';
-}
+@import '../../utilis/media-queries.scss';
 
 .form {
   min-height: 50vh;
   background-color: var(--second-color);
+
+  @include xs {
+    padding: 20px 0;
+  }
 }
 
 .form__title {
@@ -13,9 +15,21 @@
   text-align: center;
   padding: 50px 0;
   width: 100%;
+
+  @include xs {
+    padding: 0;
+  }
 }
 
 form {
   max-width: 600px;
   margin: 0 auto;
+}
+
+.form-control {
+  border: var(--color-white);
+}
+
+.btn {
+  background-color: var(--color-white);
 }

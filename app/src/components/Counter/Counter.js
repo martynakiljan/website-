@@ -9,63 +9,66 @@ import { InView } from "react-intersection-observer";
 
 const Counter = () => {
   const [inView, setInView] = useState(false);
+
   return (
     <div className="counter" inView={inView}>
       <InView onChange={setInView}>
-        <InView onChange={setInView}>
-          {({ ref, inView }) => (
-            <div className="counter__inner" ref={ref}>
-              <CountUp
-                start={0}
-                end={16343}
-                duration={3}
-                separator=" "
-                decimals={0}
-                decimal=","
-                prefix=""
-                suffix="m²"
-                onEnd={() => console.log("Ended! 👏")}
-                onStart={() => console.log("Started! 💨")}
-              >
-                {({ countUpRef, start }) => (
-                  <div className="counter__item counter__first">
-                    <h4
-                      className="counter__count counter__first-count"
-                      ref={countUpRef}
-                    ></h4>
-                    <p className=" counter__text counter__first-text">
-                      lorem ipsum
-                    </p>
-                  </div>
-                )}
-              </CountUp>
-              <CountUp
-                start={0}
-                end={12092}
-                duration={3}
-                separator=" "
-                decimals={0}
-                decimal=","
-                prefix=""
-                suffix=""
-                onEnd={() => console.log("Ended! 👏")}
-                onStart={() => console.log("Started! 💨")}
-              >
-                {({ countUpRef, start }) => (
-                  <div className="counter__item counter__second">
-                    <h4
-                      className="counter__count counter__item counter__first-count"
-                      ref={countUpRef}
-                    ></h4>
-                    <p className="counter__text counter__first-text">
-                      lorem ipsum ip
-                    </p>
-                  </div>
-                )}
-              </CountUp>
-            </div>
-          )}
-        </InView>
+        {({ ref }) => (
+          <div className="counter__inner" ref={ref}>
+            {inView ? (
+              <>
+                <CountUp
+                  start={0}
+                  end={16343}
+                  duration={3}
+                  separator=" "
+                  decimals={0}
+                  decimal=","
+                  prefix=""
+                  suffix="m²"
+                  onEnd={() => console.log("Ended! 👏")}
+                  onStart={() => console.log("Started! 💨")}
+                >
+                  {({ countUpRef, start }) => (
+                    <div className="counter__item counter__first">
+                      <h4
+                        className="counter__count counter__first-count"
+                        ref={countUpRef}
+                      ></h4>
+                      <p className=" counter__text counter__first-text">
+                        lorem ipsum
+                      </p>
+                    </div>
+                  )}
+                </CountUp>
+                <CountUp
+                  start={0}
+                  end={12092}
+                  duration={3}
+                  separator=" "
+                  decimals={0}
+                  decimal=","
+                  prefix=""
+                  suffix=""
+                  onEnd={() => console.log("Ended! 👏")}
+                  onStart={() => console.log("Started! 💨")}
+                >
+                  {({ countUpRef, start }) => (
+                    <div className="counter__item counter__second">
+                      <h4
+                        className="counter__count counter__item counter__first-count"
+                        ref={countUpRef}
+                      ></h4>
+                      <p className="counter__text counter__first-text">
+                        lorem ipsum ip
+                      </p>
+                    </div>
+                  )}
+                </CountUp>
+              </>
+            ) : null}
+          </div>
+        )}
       </InView>
     </div>
   );

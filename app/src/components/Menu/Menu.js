@@ -1,8 +1,9 @@
 /** @format */
+import "./menu.scss";
 
-const Menu = () => {
+const Menu = ({ isOpen }) => {
   return (
-    <ul className="menu__list">
+    <ul className={`menu__list ${isOpen ? "menu-is-open" : ""}`}>
       <li className="menu__item">
         <a className="menu__link">Home</a>
       </li>

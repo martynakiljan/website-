@@ -1,6 +1,12 @@
+@import '../../utilis/media-queries.scss';
+
 .slider {
   min-height: 30vh;
   margin-top: 50px;
+
+  @include xs {
+    margin-top: 0;
+  }
 }
 
 .slider__img {

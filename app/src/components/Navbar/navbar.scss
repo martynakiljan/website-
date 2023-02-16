@@ -14,11 +14,11 @@
   justify-content: space-between;
   color: var(--white-smoke-color);
   padding: 20px 0;
-  height: 100%;
 
   @include xs {
     flex-direction: column;
     padding: 0;
+    height: 100%;
   }
 }
 

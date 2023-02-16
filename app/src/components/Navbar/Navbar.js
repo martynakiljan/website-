@@ -1,6 +1,5 @@
 /** @format */
 
-import React from "react";
 import "./navbar.scss";
 import "../../utilis/basic.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,8 +9,11 @@ import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import Menu from "../Menu/Menu";
 import Burger from "../Burger/Burger";
 import "../Menu/menu.scss";
+import React, { useState } from "react";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <div className="nav">
@@ -50,10 +52,10 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <Burger className="burger"></Burger>
+        <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
         <div className="menu">
           <div className="menu__inner">
-            <Menu />
+            <Menu isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
         </div>
       </div>

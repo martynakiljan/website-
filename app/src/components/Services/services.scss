@@ -81,6 +81,10 @@
 
 .services__items-title {
   margin: 50px 0;
+
+  @include xs {
+    margin: 20px 0;
+  }
 }
 
 .services__service {

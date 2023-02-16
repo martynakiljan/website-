@@ -1,18 +1,16 @@
 /** @format */
 import "./buger.scss";
+import React from "react";
 import { Twirl as Hamburger } from "hamburger-react";
-import React, { useState } from "react";
 
-const Burger = () => {
-  const [isOpen, setOpen] = useState(false);
-
+const Burger = ({ isOpen, setIsOpen }) => {
   return (
     <Hamburger
       color="#b8b8b8"
-      className="burger"
-      toggled={isOpen}
-      toggle={setOpen}
+      className={`burger ${isOpen? "menu-is-open " : ""}`}
       direction="right"
+      toggled={isOpen}
+      toggle={setIsOpen}
     >
       <span></span>
       <span></span>

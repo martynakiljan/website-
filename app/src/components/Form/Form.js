@@ -2,10 +2,11 @@
 
 import React from "react";
 import "./form.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Form = () => {
   const [formStatus, setFormStatus] = React.useState("Send");
-  
+
   const onSubmit = (e) => {
     e.preventDefault();
     setFormStatus("Submitting...");
