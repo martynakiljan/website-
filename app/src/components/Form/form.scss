@@ -1,6 +1,6 @@
-@import '../../utilis/media-queries.scss';
+@import "../../utilis/media-queries.scss";
 
-.form {
+.form-container {
   min-height: 50vh;
   background-color: var(--second-color);
 
@@ -21,9 +21,15 @@
   }
 }
 
-form {
+.form {
   max-width: 600px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  @include xs {
+    padding: 0 20px;
+  }
 }
 
 .form-control {
@@ -32,4 +38,26 @@ form {
 
 .btn {
   background-color: var(--color-white);
+}
+
+.input {
+  height: 30px;
+  border-radius: 5px;
+}
+
+.label {
+  padding: 5px 0;
+}
+
+.btn-submit {
+  margin: 10px 0;
+  width: 100px;
+  min-height: 20px;
+  padding: 5px 0;
+  background: var(--white-color);
+}
+
+.text-area {
+  border-radius: 5px;
+  min-height: 100px;
 }

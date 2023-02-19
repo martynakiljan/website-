@@ -1,15 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600;700;800&family=Raleway:wght@100&display=swap');
 
 :root {
   --main-color: #4d4b4a;
   --second-color: #f6ce4a;
   --white-color: #fff;
+  --black-color: #000000;
   --gray-light-color: #b8b8b8;
   --white-smoke-color: #e8e8e8;
-  --max-width: 1000px;
+  --max-width: 1200px;
 }
 
 * {
+  scroll-behavior: smooth;
+
   border: none;
   margin: 0;
   padding: 0;
@@ -17,11 +20,8 @@
   list-style: none;
   text-decoration: none;
   font-size: 12px;
+  font-weight: lighter;
 }
-
-/* .page {
-    background-color: var(--white-smoke-color);
-} */
 
 .page__inner {
   max-width: var(--max-width);
@@ -47,4 +47,13 @@
 
 .scroll-to-top {
   right: 20px !important;
+}
+
+.beatloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vh;
+  height: 100vh;
+  margin: 0 auto;
 }

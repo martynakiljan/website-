@@ -14,11 +14,18 @@ import React, { useState } from "react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
   return (
     <>
       <div className="nav">
         <div className="nav__inner">
-          <div className="nav__logo"> LOGO </div>
+          <div className="nav__logo" onClick={refreshPage}>
+            {" "}
+            LOGO{" "}
+          </div>
           <div className="nav__meta">
             <div className="nav__meta-item">
               <div className="nav__meta-icon">
@@ -53,11 +60,7 @@ const Navbar = () => {
           </div>
         </div>
         <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
-        <div className="menu">
-          <div className="menu__inner">
-            <Menu isOpen={isOpen} setIsOpen={setIsOpen} />
-          </div>
-        </div>
+        <Menu isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
     </>
   );

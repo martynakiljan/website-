@@ -8,21 +8,6 @@
   align-items: center;
   z-index: 100;
 
-  //   &::after {
-  //     content: '';
-  //     position: absolute;
-  //     top: 0;
-  //     bottom: 0;
-  //     left: 0;
-  //     right: 0;
-  //     background-color: #fff;
-  //     background-image: radial-gradient(circle, #e8e8e8 20%, transparent 10%),
-  //       radial-gradient(circle, #e8e8e8 20%, transparent 10%);
-  //     background-size: 100px 100px;
-  //     background-position: 0 0, 50px 50px;
-  //     opacity: 0.6;
-  //   }
-
   @include xs {
     flex-direction: column;
     padding: 20px;

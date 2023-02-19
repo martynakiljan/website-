@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <>
       <Navbar />
-      <header className="header">
+      <header className="header" id="home">
         <div className="header__mask"></div>
         <div className="header__title">
           <h1 className="header__text-first">Construction</h1>

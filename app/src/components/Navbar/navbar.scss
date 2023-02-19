@@ -1,8 +1,9 @@
 @import '../../utilis/media-queries.scss';
 
 .nav {
-  position: relative;
-  height: 15vh;
+  position: fixed;
+  z-index: 1111;
+  height: 12vh;
   width: 100%;
   background-color: var(--main-color);
 }
@@ -91,6 +92,7 @@
 .nav__meta-icon-facebook svg,
 .nav__meta-icon-language svg {
   color: var(--second-color);
+  cursor: pointer;
 }
 
 .nav__logo {

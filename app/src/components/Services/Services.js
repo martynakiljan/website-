@@ -8,7 +8,7 @@ import "font-awesome/css/font-awesome.min.css";
 
 const Services = () => {
   return (
-    <>
+    <div className="services" id="service">
       <div className="services-tiles">
         <div className="services-tiles__inner">
           <div className="services-tile services-tile__first">
@@ -73,7 +73,7 @@ const Services = () => {
           </AnimationOnScroll>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default Services;
