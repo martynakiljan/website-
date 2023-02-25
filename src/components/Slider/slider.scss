@@ -1,4 +1,4 @@
-@import '../../utilis/media-queries.scss';
+@import '../../assets/styles/media-queries.scss';
 
 .slider {
   min-height: 30vh;
@@ -17,14 +17,14 @@
 }
 
 .slider__img-1 {
-  background-image: url(../../images-slider/slider-img-1.jpg);
+  background-image: url("../../assets/images/images-slider/slider-img-1.jpg");
 }
 
 .slider__img-2 {
-  background-image: url(../../images-slider/slider-img-2.jpg);
+  background-image: url("../../assets/images/images-slider/slider-img-1.jpg");
 }
 .slider__img-3 {
-  background-image: url(../../images-slider/slider-img-3.jpg);
+  background-image: url("../../assets/images/images-slider/slider-img-1.jpg");
 }
 
 .carousel .control-dots .dot {

@@ -9,7 +9,7 @@ import BeatLoader from "react-spinners/BeatLoader";
 import Counter from "./components/Counter/Counter";
 import Form from "./components/Form/Form";
 import Footer from "./components/Footer/Footer";
-import "./utilis/basic.scss";
+import "./assets/styles/basic.scss";
 import ScrollToTop from "react-scroll-to-top";
 
 const App = () => {

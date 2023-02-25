@@ -1,7 +1,4 @@
-@import '../../utilis/media-queries.scss';
-
-.services {
-}
+@import '../../assets/styles/media-queries.scss';
 
 .services-tiles__inner {
   display: flex;
@@ -35,15 +32,15 @@
 }
 
 .services-tile__first {
-  background-image: url('../../images-tiles/img-1.jpg');
+  background-image: url('../../assets/images/images-tiles/img-1.jpg');
 }
 
 .services-tile__second {
-  background-image: url('../../images-tiles/img-2.jpg');
+  background-image: url('../../assets/images/images-tiles/img-2.jpg');
 }
 
 .services-tile__third {
-  background-image: url('../../images-tiles/img-3.jpg');
+  background-image: url('../../assets/images/images-tiles/img-3.jpg');
 }
 
 .services-tile__content {

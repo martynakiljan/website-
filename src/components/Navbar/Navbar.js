@@ -1,7 +1,7 @@
 /** @format */
 
 import "./navbar.scss";
-import "../../utilis/basic.scss";
+import "../../assets/styles/basic.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faHouse, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import "font-awesome/css/font-awesome.min.css";
