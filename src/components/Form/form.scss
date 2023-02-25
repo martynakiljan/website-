@@ -3,9 +3,19 @@
 .form-container {
   min-height: 50vh;
   background-color: var(--second-color);
+  margin-top: -5px;
 
   @include xs {
     padding: 20px 0;
+  }
+}
+
+.form-wave {
+  width: 100vw;
+  margin-bottom: -100px;
+
+  @include xs {
+    margin-bottom: -50px;
   }
 }
 
@@ -30,7 +40,6 @@ h4.form__title {
   display: block;
   margin: 0 auto;
   text-align: center;
-  padding: 50px 0;
   width: 100%;
 
   @include xs {
@@ -59,7 +68,7 @@ h4.form__title {
 
 .input {
   height: 30px;
-  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .label {
@@ -75,7 +84,7 @@ h4.form__title {
 }
 
 .text-area {
-  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   min-height: 100px;
 }
 .form__meta-email,
@@ -119,10 +128,12 @@ h4.form__title {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  margin-left: 50px;
 
   @include xs {
     align-items: flex-start;
     flex-direction: row;
     justify-content: center;
+    margin-left: 0;
   }
 }
