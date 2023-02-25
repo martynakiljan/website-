@@ -2,7 +2,6 @@
 import Navbar from "../Navbar/Navbar";
 import "./header.scss";
 import { AnimationOnScroll } from "react-animation-on-scroll";
-import "animate.css/animate.min.css";
 
 const Header = () => {
   return (

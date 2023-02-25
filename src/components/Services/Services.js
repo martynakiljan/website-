@@ -2,9 +2,7 @@
 import "./services.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AnimationOnScroll } from "react-animation-on-scroll";
-import "animate.css/animate.min.css";
 import { faPaintRoller } from "@fortawesome/free-solid-svg-icons";
-import "font-awesome/css/font-awesome.min.css";
 
 const Services = () => {
   return (

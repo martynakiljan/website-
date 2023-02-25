@@ -11,6 +11,8 @@ import Form from "./components/Form/Form";
 import Footer from "./components/Footer/Footer";
 import "./assets/styles/basic.scss";
 import ScrollToTop from "react-scroll-to-top";
+import "font-awesome/css/font-awesome.min.css";
+import "animate.css/animate.min.css";
 
 const App = () => {
   const [loading, setLoading] = useState(false);

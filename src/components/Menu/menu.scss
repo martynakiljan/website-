@@ -1,18 +1,12 @@
 @import '../../assets/styles/media-queries.scss';
 
 .menu {
-  position: relative;
-  top: -12px;
-  background-color: var(--white-smoke-color);
-  height: 7.5vh;
-  margin: 0 auto;
-  max-width: var(--max-width);
-  z-index: 100;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
+  height: 100%;
   @include xs {
     transform: translateX(-150%);
     transition: transform 0.4s ease, opacity 0.1s ease 0.1s;
+    background-color: var(--main-color);
+    display: block;
 
     &.menu-is-open {
       transform: translateX(0);
@@ -51,10 +45,12 @@
   align-items: center;
 
   &:hover {
-    color: var(--black-color);
+    .menu__link {
+      color: var(--second-color);
+    }
   }
 }
 
 .menu__link {
-  color: var(--black-color);
+  color: var(--white-smoke-color);
 }

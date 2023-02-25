@@ -9,7 +9,24 @@
   }
 }
 
-.form__title {
+.form__inner {
+  @include xs {
+    padding: 0 20px;
+  }
+}
+
+.form__inner--inner {
+  display: flex;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  justify-content: center;
+
+  @include xs {
+    flex-direction: column;
+  }
+}
+
+h4.form__title {
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -22,13 +39,13 @@
 }
 
 .form {
-  max-width: 600px;
-  margin: 0 auto;
+  width: 50%;
   display: flex;
   flex-direction: column;
 
   @include xs {
-    padding: 0 20px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -60,4 +77,52 @@
 .text-area {
   border-radius: 5px;
   min-height: 100px;
+}
+.form__meta-email,
+.form__meta-address-street {
+  color: var(--main-color);
+}
+
+.form__meta-icon {
+  padding: 0 20px;
+
+  @include xs {
+    padding: 0;
+  }
+
+  svg {
+    height: 30px;
+    color: var(--main-color);
+
+    @include xs {
+      height: 20px;
+      padding: 0 20px;
+    }
+  }
+}
+
+.form__meta-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+
+  &:last-child {
+    border-right: none;
+    padding-bottom: 0;
+  }
+}
+
+.form__meta {
+  margin-top: 27px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include xs {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
