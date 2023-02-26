@@ -30,10 +30,7 @@ const Counter = () => {
   const ref2 = useRef(null);
 
   const isInViewport1 = useIsInViewport(ref1);
-  console.log("isInViewport1: ", isInViewport1);
-
   const isInViewport2 = useIsInViewport(ref2);
-  console.log("isInViewport2: ", isInViewport2);
 
   return (
     <>

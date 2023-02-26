@@ -1,7 +1,13 @@
 /** @format */
 import "./about.scss";
+import React, { useState } from "react";
 
 const About = () => {
+  const [showMore, setShowMore] = useState(false);
+
+  const text =
+    "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit";
+
   return (
     <div className="about" id="about">
       <div className="about__inner">
@@ -10,19 +16,20 @@ const About = () => {
           <p className="about__text about__left-text">
             At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
             kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-            amet.
+            amet. kasd gubergrebergren, no sea bergren, no sea bergren, no sea
+            bergren, no sea n, no sea takimata sanctus est Lorem ipsum dolor
           </p>
         </div>
         <div className="about__left-side about__right-side">
           <p className="about__text about__right-text">
-            {" "}
-            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-            kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-            amet. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-            sit amet.
+            {showMore ? text : `${text.substring(0, 50)}`}
           </p>
-          <button className="about__right-button">show more</button>
+          <button
+            className="about__right-button"
+            onClick={() => setShowMore(!showMore)}
+          >
+            {showMore ? "Show less" : "Show more"}
+          </button>
         </div>
       </div>
     </div>

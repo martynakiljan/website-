@@ -6,6 +6,7 @@
 
   @include xs {
     flex-direction: column;
+    padding: 0 20px;
   }
 }
 
@@ -31,7 +32,7 @@
   @include xs {
     width: 100%;
     min-height: 50vh;
-    padding: 0 20px;
+    margin: 5px 0;
   }
 }
 

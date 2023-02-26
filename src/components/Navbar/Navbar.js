@@ -13,19 +13,12 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  function refreshPage() {
-    window.location.reload(false);
-  }
-
   return (
     <>
       <div className="nav">
         <div className="nav__inner">
           <div className="nav__logo-burger">
-            <div className="nav__logo" onClick={refreshPage}>
-              {" "}
-              LOGO{" "}
-            </div>
+            <div className="nav__logo"> LOGO </div>
             <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
           <div className="nav__menu">
