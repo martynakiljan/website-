@@ -7,7 +7,7 @@ import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import Menu from "../Menu/Menu";
 import Burger from "../Burger/Burger";
 import "../Menu/menu.scss";
-import React, { useState } from "react";
+import React, { useState, useNavigate } from "react";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
@@ -18,7 +18,10 @@ const Navbar = () => {
       <div className="nav">
         <div className="nav__inner">
           <div className="nav__logo-burger">
-            <div className="nav__logo"> LOGO </div>
+            <a className="nav__logo" href="#home">
+              {" "}
+              LOGO{" "}
+            </a>
             <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
           <div className="nav__menu">
