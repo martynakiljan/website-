@@ -54,6 +54,10 @@
   padding: 10px 20px;
   margin: 20px 0;
   color: var(--main-color);
+
+  @include xs {
+    margin-bottom: 0;
+  }
 }
 
 .about__text {

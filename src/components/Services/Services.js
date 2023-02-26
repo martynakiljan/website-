@@ -2,6 +2,7 @@
 import "./services.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaintRoller } from "@fortawesome/free-solid-svg-icons";
+import Fade from "react-reveal/Fade";
 
 const Services = () => {
   return (
@@ -10,34 +11,40 @@ const Services = () => {
         <div className="services-tiles__inner">
           <div className="services-tile services-tile__first">
             <div className="services-tile__mask"></div>
-            <div className="services-tile__content">
-              <h3 className="services-tile__title">Lorem ipsum</h3>
-              <p className="services-tile__text">
-                At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                clita kasd gubergren, no sea takimata sanctus est{" "}
-              </p>
-            </div>
+            <Fade left>
+              <div className="services-tile__content">
+                <h3 className="services-tile__title">Lorem ipsum</h3>
+                <p className="services-tile__text">
+                  At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                  clita kasd gubergren, no sea takimata sanctus est{" "}
+                </p>
+              </div>
+            </Fade>
           </div>
-          <div className="services-tile services-tile__second">
-            <div className="services-tile__mask"></div>
-            <div className="services-tile__content">
-              <h3 className="services-tile__title">Lorem ipsum</h3>
-              <p className="services-tile__text">
-                At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                clita kasd gubergren, no sea takimata sanctus est{" "}
-              </p>
+          <Fade right>
+            <div className="services-tile services-tile__second">
+              <div className="services-tile__mask"></div>
+              <div className="services-tile__content">
+                <h3 className="services-tile__title">Lorem ipsum</h3>
+                <p className="services-tile__text">
+                  At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                  clita kasd gubergren, no sea takimata sanctus est{" "}
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="services-tile services-tile__third">
-            <div className="services-tile__mask"></div>
-            <div className="services-tile__content">
-              <h3 className="services-tile__title">Lorem ipsum</h3>
-              <p className="services-tile__text">
-                At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                clita kasd gubergren, no sea takimata sanctus est{" "}
-              </p>
+          </Fade>
+          <Fade left>
+            <div className="services-tile services-tile__third">
+              <div className="services-tile__mask"></div>
+              <div className="services-tile__content">
+                <h3 className="services-tile__title">Lorem ipsum</h3>
+                <p className="services-tile__text">
+                  At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                  clita kasd gubergren, no sea takimata sanctus est{" "}
+                </p>
+              </div>
             </div>
-          </div>
+          </Fade>
         </div>
       </div>
 
