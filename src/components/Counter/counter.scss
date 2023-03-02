@@ -16,7 +16,7 @@
 
 .counter__item {
   width: 100%;
-  padding: 0 50px;
+  padding: 0 100px;
   z-index: 111;
   display: flex;
   justify-content: center;
@@ -25,6 +25,7 @@
 
   @include xs {
     width: 100%;
+    padding: 0 20px;
   }
 }
 
@@ -32,6 +33,10 @@
   font-size: 60px;
   color: var(--second-color);
   font-weight: bold;
+
+  @include xs {
+    font-size: 30px;
+  }
 }
 
 .counter__text {

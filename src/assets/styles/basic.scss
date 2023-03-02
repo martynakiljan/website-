@@ -11,6 +11,10 @@
   --max-width: 1200px;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 * {
   scroll-behavior: smooth;
   border: none;

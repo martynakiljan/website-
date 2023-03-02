@@ -115,4 +115,8 @@
 
 .services__paragraph {
   line-height: 2;
+
+  @include xs {
+    text-align: center;
+  }
 }
