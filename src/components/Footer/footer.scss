@@ -1,0 +1,49 @@
+@import '../../assets/styles/media-queries.scss';
+@import '../../assets/styles/basic.scss';
+
+.footer {
+  height: 10vh;
+  color: var(--gray-color);
+}
+
+.footer__inner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: var(--main-color);
+    height: 1px;
+    top: 50%;
+  }
+
+  &::before {
+    left: 0;
+    width: 40%;
+
+    @include xs {
+      width: 20%;
+    }
+  }
+  &::after {
+    right: 0;
+    width: 40%;
+
+    @include xs {
+      width: 20%;
+    }
+  }
+}
+
+.footer-copyright {
+  padding: 0 10px;
+}
+
+.footer-company-name {
+  padding: 0 10px;
+}

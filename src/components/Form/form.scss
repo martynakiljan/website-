@@ -1,0 +1,145 @@
+@import '../../assets/styles/media-queries.scss';
+
+.form-container {
+  min-height: 50vh;
+  background-color: var(--second-color);
+  margin-top: -5px;
+
+  @include xs {
+    padding: 20px 0;
+  }
+}
+
+.form-wave {
+  width: 100vw;
+  margin-bottom: -100px;
+
+  @include xs {
+    margin-bottom: -50px;
+  }
+}
+
+.form__inner {
+  @include xs {
+    padding: 0 20px;
+  }
+}
+
+.form__inner--inner {
+  display: flex;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  justify-content: center;
+
+  @include xs {
+    flex-direction: column;
+  }
+}
+
+h4.form__title {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+
+  @include xs {
+    padding: 0;
+  }
+}
+
+.form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+
+  @include xs {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.form-control {
+  border: var(--color-white);
+}
+
+.btn {
+  background-color: var(--color-white);
+}
+
+.input {
+  height: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.label {
+  padding: 5px 0;
+}
+
+.btn-submit {
+  margin: 10px 0;
+  width: 100px;
+  min-height: 20px;
+  padding: 5px 0;
+  background: var(--white-color);
+}
+
+.text-area {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  min-height: 100px;
+}
+.form__meta-email,
+.form__meta-address-street {
+  color: var(--main-color);
+}
+
+.form__meta-icon {
+  padding: 0 20px;
+
+  @include xs {
+    padding: 0;
+  }
+
+  svg {
+    height: 30px;
+    color: var(--main-color);
+
+    @include xs {
+      height: 20px;
+      padding-right: 10px;
+    }
+  }
+}
+
+.form__meta-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+
+  &:last-child {
+    border-right: none;
+    padding-bottom: 0;
+  }
+}
+
+.form__meta {
+  margin-top: 27px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 50px;
+
+  @include xs {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 0;
+  }
+}
+
+.form__meta-text {
+  @include xs {
+    font-size: 12px;
+  }
+}
