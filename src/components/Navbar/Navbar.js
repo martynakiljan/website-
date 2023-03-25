@@ -9,6 +9,7 @@ import Burger from "../Burger/Burger";
 import "../Menu/menu.scss";
 import React, { useState, useNavigate } from "react";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import context from "../../utilis/context";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,10 @@ const Navbar = () => {
       <div className="nav">
         <div className="nav__inner">
           <div className="nav__logo-burger">
-            <a className="nav__logo"  href="#home"> LOGO </a>
+            <a className="nav__logo" href="#home">
+              {" "}
+              LOGO{" "}
+            </a>
             <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
           <div className="nav__menu">
@@ -29,9 +33,13 @@ const Navbar = () => {
               <div className="nav__meta-icon nav__meta-icon-facebook">
                 <FontAwesomeIcon icon={faFacebookF} />
               </div>
-              <div className="nav__meta-icon nav__meta-icon-language">
+              <select value={context.locale} onChange={context.selectLanguage}>
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+              </select>
+              {/* <div className="nav__meta-icon nav__meta-icon-language">
                 <FontAwesomeIcon icon={faGlobe} />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

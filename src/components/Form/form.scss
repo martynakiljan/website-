@@ -58,6 +58,9 @@ h4.form__title {
   }
 }
 
+.text-area {
+  padding-top: 10px;
+}
 .form-control {
   border: var(--color-white);
 }
@@ -142,4 +145,9 @@ h4.form__title {
   @include xs {
     font-size: 12px;
   }
+}
+
+.form-error {
+  color: var(--main-color);
+  padding: 10px 0;
 }

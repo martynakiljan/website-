@@ -1,32 +1,92 @@
 /** @format */
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./form.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faHouse } from "@fortawesome/free-solid-svg-icons";
+import { inputs } from "../../utilis/formInputsArr";
+import FormInput from "./FormInput";
+import {
+  validateFirstName,
+  validateLastName,
+  validateEmail,
+} from "../../utilis/validateInputs";
 
 const Form = () => {
+  const defaultFormData = {
+    firstName: "",
+    lastName: "",
+    email: "",
+  };
+  const [formData, setFormData] = useState(defaultFormData);
+  const [formErrors, setFormErrors] = useState(defaultFormData);
+
+  const handleEdit = (name, value) => {
+    validateInput(name, value);
+
+    setFormData((formData) => ({
+      ...formData,
+      [name]: value,
+    }));
+  };
+  const validateInput = (name, value) => {
+    switch (name) {
+      case "firstName":
+        validateFirstName(value, setFormErrorsWrapper);
+        break;
+      case "lastName":
+        validateLastName(value, setFormErrorsWrapper);
+        break;
+      case "email":
+        validateEmail(value, setFormErrorsWrapper);
+        break;
+      default:
+        break;
+    }
+  };
+
+  const setFormErrorsWrapper = (name, value) => {
+    console.log(name, value);
+    setFormErrors({
+      ...formErrors,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (event) => {
+    if (isValidForm()) {
+      event.preventDefault();
+      alert("ok");
+    }
+  };
+
+  const isValidForm = () => {
+    return Object.values(formErrors).every(
+      (currentValue) => currentValue === ""
+    );
+  };
+
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        form.current,
-        "YOUR_PUBLIC_KEY"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    // emailjs
+    //   .sendForm(
+    //     "YOUR_SERVICE_ID",
+    //     "YOUR_TEMPLATE_ID",
+    //     form.current,
+    //     "YOUR_PUBLIC_KEY"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log(result.text);
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     }
+    //   );
   };
 
   return (
@@ -50,13 +110,27 @@ const Form = () => {
           <h4 className="title form__title">Contact us!</h4>
           <div className="form__inner--inner">
             <form className="form" ref={form} onSubmit={sendEmail}>
-              <label className="label">Name</label>
-              <input className="input" type="text" name="user_name" />
-              <label className="label">Email</label>
-              <input className="input" type="email" name="user_email" />
-              <label className="label">Message</label>
+              {inputs.map(({ id, text, name }) => (
+                <FormInput
+                  key={id}
+                  text={text}
+                  name={name}
+                  value={formData.name}
+                  formErrors={formErrors[name]}
+                  onChange={(event) => handleEdit(name, event.target.value)}
+                />
+              ))}
+              <label className="label">Your massage:</label>
               <textarea className="text-area" name="message" />
-              <input className="btn-submit" type="submit" value="Send" />
+              <button
+                onClick={handleSubmit}
+                className="btn-submit"
+                type="submit"
+                disabled={!isValidForm()}
+              >
+                {" "}
+                SEND
+              </button>
             </form>
 
             <div className="form__meta">
