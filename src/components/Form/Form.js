@@ -118,10 +118,10 @@ const Form = () => {
                   value={formData.name}
                   formErrors={formErrors[name]}
                   onChange={(event) => handleEdit(name, event.target.value)}
+      
                 />
               ))}
-              <label className="label">Your massage:</label>
-              <textarea className="text-area" name="message" />
+
               <button
                 onClick={handleSubmit}
                 className="btn-submit"

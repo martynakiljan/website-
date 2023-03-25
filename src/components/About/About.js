@@ -1,7 +1,7 @@
 /** @format */
 import "./about.scss";
 import React, { useState } from "react";
-
+import Fade from "react-reveal/Fade";
 const About = () => {
   const [showMore, setShowMore] = useState(false);
 
@@ -30,6 +30,49 @@ const About = () => {
           >
             {showMore ? "Show less" : "Show more"}
           </button>
+        </div>
+      </div>
+      <div className="about__inner--second">
+        <h2 className="title about__left-title">What makes us stand out ?</h2>
+        <div className="about-distinction-tiles">
+          <div className="about-distinction-tiles__inner">
+            <div className="about-distinction-tile about-distinction-tile__first">
+              <div className="about-distinction-tile__mask"></div>
+              <Fade left>
+                <div className="about-distinction-tile__content">
+                  <h3 className="about-distinction-tile__title">Lorem ipsum</h3>
+                  <p className="about-distinction-tile__text">
+                    At vero eos et accusam et justo duo dolores et ea rebum.
+                    Stet clita kasd gubergren, no sea takimata sanctus est{" "}
+                  </p>
+                </div>
+              </Fade>
+            </div>
+
+            <div className="about-distinction-tile about-distinction-tile__second">
+              <div className="about-distinction-tile__mask"></div>
+              <div className="about-distinction-tile__content">
+                <h3 className="about-distinction-tile__title">Lorem ipsum</h3>
+                <p className="about-distinction-tile__text">
+                  At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                  clita kasd gubergren, no sea takimata sanctus est{" "}
+                </p>
+              </div>
+            </div>
+
+            <Fade right>
+              <div className="about-distinction-tile about-distinction-tile__third">
+                <div className="about-distinction-tile__mask"></div>
+                <div className="about-distinction-tile__content">
+                  <h3 className="about-distinction-tile__title">Lorem ipsum</h3>
+                  <p className="about-distinction-tile__text">
+                    At vero eos et accusam et justo duo dolores et ea rebum.
+                    Stet clita kasd gubergren, no sea takimata sanctus est{" "}
+                  </p>
+                </div>
+              </div>
+            </Fade>
+          </div>
         </div>
       </div>
     </div>

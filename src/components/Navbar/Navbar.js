@@ -7,15 +7,16 @@ import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import Menu from "../Menu/Menu";
 import Burger from "../Burger/Burger";
 import "../Menu/menu.scss";
-import React, { useState, useNavigate } from "react";
+import React, { useState, useContext } from "react";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
-import context from "../../utilis/context";
+import Context from "../../utilis/context";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { locale, selectLanguage } = useContext(Context);
 
   return (
-    <>
+    <Context.Provider>
       <div className="nav">
         <div className="nav__inner">
           <div className="nav__logo-burger">
@@ -33,9 +34,9 @@ const Navbar = () => {
               <div className="nav__meta-icon nav__meta-icon-facebook">
                 <FontAwesomeIcon icon={faFacebookF} />
               </div>
-              <select value={context.locale} onChange={context.selectLanguage}>
-                <option value="en">English</option>
-                <option value="de">Deutsch</option>
+              <select className="lang-container" value={locale} onChange={selectLanguage} name="selected">
+                <option className="lang" value="de">DE</option>
+                <option className="lang" value="en">EN</option>
               </select>
               {/* <div className="nav__meta-icon nav__meta-icon-language">
                 <FontAwesomeIcon icon={faGlobe} />
@@ -44,7 +45,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </>
+    </Context.Provider>
   );
 };
 

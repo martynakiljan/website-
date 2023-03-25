@@ -19,4 +19,10 @@ export const inputs = [
     name: "email",
     text: "Email:",
   },
+  {
+    id: "textarea",
+    type: "text",
+    name: "message",
+    text: "Your Message:"
+  },
 ];
