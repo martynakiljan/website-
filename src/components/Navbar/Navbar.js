@@ -7,13 +7,26 @@ import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import Menu from "../Menu/Menu";
 import Burger from "../Burger/Burger";
 import "../Menu/menu.scss";
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import Context from "../../utilis/context";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { locale, selectLanguage } = useContext(Context);
+  const [isDeLang, setIsDeLang] = useState(true);
+
+  console.log(isDeLang);
+
+  console.log(isDeLang);
+
+  useEffect(() => {
+    if (locale === "de") {
+      setIsDeLang(true);
+    } else {
+      setIsDeLang(false);
+    }
+  }, [locale]);
 
   return (
     <Context.Provider>
@@ -34,10 +47,17 @@ const Navbar = () => {
               <div className="nav__meta-icon nav__meta-icon-facebook">
                 <FontAwesomeIcon icon={faFacebookF} />
               </div>
-              <select className="lang-container" value={locale} onChange={selectLanguage} name="selected">
-                <option className="lang" value="de">DE</option>
-                <option className="lang" value="en">EN</option>
-              </select>
+              <div className="lang-container" value={locale}>
+                {isDeLang ? (
+                  <button className="lang" value="de" onClick={selectLanguage}>
+                    DE
+                  </button>
+                ) : (
+                  <button className="lang" value="en" onClick={selectLanguage}>
+                    EN
+                  </button>
+                )}
+              </div>
               {/* <div className="nav__meta-icon nav__meta-icon-language">
                 <FontAwesomeIcon icon={faGlobe} />
               </div> */}

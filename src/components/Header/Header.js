@@ -10,13 +10,13 @@ const Header = () => {
       <header className="header" id="home">
         <div className="header__mask"></div>
         <div className="header__title">
-          <FormattedMessage
-            id="app.header"
-            defaultMessage="Learn React"
-            className="header__text-first"
-          >
-    
-          </FormattedMessage>
+          <h1 className="header__text-first">
+            <FormattedMessage
+              id="app.header"
+              defaultMessage="Learn React"
+            ></FormattedMessage>
+          </h1>
+
           <h2 className="header__text-second">we can. simply</h2>
         </div>
       </header>

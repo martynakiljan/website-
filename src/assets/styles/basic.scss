@@ -11,7 +11,6 @@
   --max-width: 1200px;
 }
 
-
 * {
   scroll-behavior: smooth;
   border: none;
@@ -25,9 +24,17 @@
   box-sizing: border-box;
 }
 
+#root {
+  height: 100vh;
+}
+
 .page__inner {
   max-width: var(--max-width);
   margin: 0 auto;
+
+  @include xs {
+    padding: 0 20px;
+  }
 }
 
 .title {
