@@ -6,10 +6,9 @@ import { faPaintRoller } from "@fortawesome/free-solid-svg-icons";
 
 const Services = () => {
   return (
-    <div className="services" id="service">
-
+    <div className="services section" id="service">
+      <h3 className="title services__items-title">Our Services</h3>
       <div className="services__items-icons">
-        <h3 className="title services__items-title">Our Services</h3>
         <div className="services__items-icons__inner">
           <div className="services__service">
             <FontAwesomeIcon icon={faPaintRoller} />

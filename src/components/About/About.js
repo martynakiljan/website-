@@ -2,6 +2,13 @@
 import "./about.scss";
 import React, { useState } from "react";
 import Fade from "react-reveal/Fade";
+import Team from "../Team/Team";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faAnglesRight,
+  faAnglesLeft,
+} from "@fortawesome/free-solid-svg-icons";
+
 const About = () => {
   const [showMore, setShowMore] = useState(false);
 
@@ -9,7 +16,7 @@ const About = () => {
     "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit";
 
   return (
-    <div className="about" id="about">
+    <div className="about section" id="about">
       <div className="about__inner">
         <div className="about__left-side about__left-side">
           <h2 className="title about__left-title">About us</h2>
@@ -30,9 +37,21 @@ const About = () => {
           >
             {showMore ? "Show less" : "Show more"}
           </button>
+          <div className="about__inner-quote">
+            <p className="about__quote-text">
+          <FontAwesomeIcon icon={faAnglesRight} />
+              <span className="about__quote-text">
+                {" "}
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor{" "}
+              </span>
+        <FontAwesomeIcon icon={faAnglesLeft} />
+            </p>
+          </div>
         </div>
       </div>
-      <div className="about__inner--second">
+      <Team />
+      <div className="about__inner--second section">
         <h2 className="title about__left-title">What makes us stand out ?</h2>
         <div className="about-distinction-tiles">
           <div className="about-distinction-tiles__inner">
@@ -55,7 +74,7 @@ const About = () => {
                 <h3 className="about-distinction-tile__title">Lorem ipsum</h3>
                 <p className="about-distinction-tile__text">
                   At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                  clita kasd gubergren, no sea takimata sanctus est{" "}
+                  clita kasd gubergren, no sea takimata sanctus est
                 </p>
               </div>
             </div>

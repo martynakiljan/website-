@@ -1,5 +1,5 @@
-@import '../../assets/styles/media-queries.scss';
-@import '../../assets/styles/basic.scss';
+@import "../../assets/styles/media-queries.scss";
+@import "../../assets/styles/basic.scss";
 
 .footer {
   height: 10vh;
@@ -15,7 +15,7 @@
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     background-color: var(--main-color);
     height: 1px;
@@ -26,7 +26,7 @@
     left: 0;
     width: 40%;
 
-    @include xs {
+    @include md-max {
       width: 20%;
     }
   }
@@ -34,7 +34,7 @@
     right: 0;
     width: 40%;
 
-    @include xs {
+    @include md-max {
       width: 20%;
     }
   }

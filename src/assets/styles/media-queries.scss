@@ -1,95 +1,205 @@
-// media aliases and breakpoints
-$screen-sm-min: 600px;
-$screen-md-min: 960px;
-$screen-lg-min: 1280px;
-$screen-xl-min: 1920px;
+$layout-breakpoints: (
+  xxs: 400px,
+  xs: 480px,
+  sm: 768px,
+  md: 992px,
+  lg: 1025px,
+  xl: 1330px,
+);
+$is-web: true;
 
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include xl-min($print) {
 
-$screen-xs-max: 1087px;
-$screen-sm-max: 959px;
-$screen-md-max: 1279px;
-$screen-lg-max: 1919px;
-$screen-xl-max: 5000px;
+  }
+*/
 
-// media devices
-@mixin xs {
-  @media screen and (max-width: #{$screen-xs-max}) {
+@mixin xs-min($print: false) {
+  @include mq-min-print(map-get($layout-breakpoints, xs), $print) {
+    @if $is-web == true {
+      @content;
+    }
+  }
+}
+
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include sm-min($print) {
+
+  }
+*/
+@mixin sm-min($print: false) {
+  @include mq-min-print(map-get($layout-breakpoints, sm), $print) {
+    @if $is-web == true {
+      @content;
+    }
+  }
+}
+
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include md-min($print) {
+
+  }
+*/
+@mixin md-min($print: false) {
+  @include mq-min-print(map-get($layout-breakpoints, md), $print) {
+    @if $is-web == true {
+      @content;
+    }
+  }
+}
+
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include lg-min($print) {
+
+  }
+*/
+@mixin lg-min($print: false) {
+  @include mq-min-print(map-get($layout-breakpoints, lg), $print) {
+    @if $is-web == true {
+      @content;
+    }
+  }
+}
+
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include xl-min($print) {
+
+  }
+*/
+@mixin xl-min($print: false) {
+  @include mq-min-print(map-get($layout-breakpoints, xl), $print) {
+    @if $is-web == true {
+      @content;
+    }
+  }
+}
+
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include xs-max($print) {
+
+  }
+*/
+@mixin xs-max($print: false) {
+  @include mq-max-print(map-get($layout-breakpoints, xs), $print) {
     @content;
   }
 }
 
-@mixin sm {
-  @media screen and (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max}) {
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include sm-max($print) {
+
+  }
+*/
+@mixin sm-max($print: false) {
+  @include mq-max-print(map-get($layout-breakpoints, sm), $print) {
     @content;
   }
 }
 
-@mixin md {
-  @media screen and (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max}) {
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include md-max($print) {
+
+  }
+*/
+@mixin md-max($print: false) {
+  @include mq-max-print(map-get($layout-breakpoints, md), $print) {
     @content;
   }
 }
 
-@mixin lg {
-  @media screen and (min-width: #{$screen-lg-min}) and (max-width: #{$screen-lg-max}) {
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include lg-max($print) {
+
+  }
+*/
+@mixin lg-max($print: false) {
+  @include mq-max-print(map-get($layout-breakpoints, lg), $print) {
     @content;
   }
 }
 
-@mixin xl {
-  @media screen and (min-width: #{$screen-xl-min}) and (max-width: #{$screen-xl-max}) {
+/*
+  Usage:
+  if $print has no value, @media print won't be used
+  if $print has true, @media print will be used
+  @include xl-max($print) {
+
+  }
+*/
+@mixin xl-max($print: false) {
+  @include mq-max-print(map-get($layout-breakpoints, xl), $print) {
     @content;
   }
 }
 
-// media lt queries
-@mixin lt-sm {
-  @media screen and (max-width: #{$screen-xs-max}) {
-    @content;
+/*
+  Usage:
+  since word cannot work with media print, the files set the is-not-word variable globally,
+  this will ensure that all print things are added in print in pdf.css and print. and all
+  word things are not added within print media query.
+  @include print {
+
+  }
+*/
+
+@mixin print($is-pdf: $is-pdf) {
+  @if $is-pdf == true {
+    @media print {
+      @content;
+    }
   }
 }
 
-@mixin lt-md {
-  @media screen and (max-width: #{$screen-sm-max}) {
+/*
+  Helpers do not use
+*/
+@mixin mq-min-print($breakpoint, $print: false) {
+  @media screen and (min-width: $breakpoint) {
     @content;
+  }
+
+  @if $print == true {
+    @media print {
+      @content;
+    }
   }
 }
 
-@mixin lt-lg {
-  @media screen and (max-width: #{$screen-md-max}) {
+@mixin mq-max-print($breakpoint, $print: false) {
+  @media (max-width: '#{$breakpoint - 1}') {
     @content;
   }
-}
 
-@mixin lt-xl {
-  @media screen and (max-width: #{$screen-lg-max}) {
-    @content;
+  @if $print == true {
+    @media print {
+      @content;
+    }
   }
 }
-
-// media gt queries
-@mixin gt-xs {
-  @media screen and (min-width: #{$screen-sm-min}) {
-    @content;
-  }
-}
-
-@mixin gt-sm {
-  @media screen and (min-width: #{$screen-md-min}) {
-    @content;
-  }
-}
-
-@mixin gt-md {
-  @media screen and (min-width: #{$screen-lg-min}) {
-    @content;
-  }
-}
-
-@mixin gt-lg {
-  @media screen and (min-width: #{$screen-xl-min}) {
-    @content;
-  }
-}
-
-// https: ; //github.com/Necromancerx/media-queries-scss-mixins/blob/master/media-queries.scss

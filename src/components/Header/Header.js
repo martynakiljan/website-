@@ -17,7 +17,7 @@ const Header = () => {
             ></FormattedMessage>
           </h1>
 
-          <h2 className="header__text-second">we can. simply</h2>
+          <h2 className="header__text-second">IHR BAU PARTNER</h2>
         </div>
       </header>
     </>

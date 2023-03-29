@@ -1,4 +1,10 @@
-@import '../../assets/styles/media-queries.scss';
+@import "../../assets/styles/media-queries.scss";
+
+.services {
+  @include md-min {
+    padding-top: 87px;
+  }
+}
 
 .services__items-icons {
   min-height: 30vh;
@@ -9,7 +15,7 @@
 
   margin: 50px 0;
 
-  @include xs {
+  @include md-min {
     margin: 20px 0;
   }
 }
@@ -31,7 +37,7 @@
 .services__items-icons__inner {
   display: flex;
 
-  @include xs {
+  @include md-max {
     flex-direction: column;
     padding: 20px;
   }
@@ -40,7 +46,7 @@
 .services__paragraph {
   line-height: 2;
 
-  @include xs {
+  @include md-min {
     text-align: center;
   }
 }

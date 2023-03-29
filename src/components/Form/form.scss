@@ -1,26 +1,25 @@
-@import '../../assets/styles/media-queries.scss';
+@import "../../assets/styles/media-queries.scss";
 
 .form-container {
-  min-height: 50vh;
   background-color: var(--second-color);
   margin-top: -5px;
-
-  @include xs {
+  margin-bottom: 30px;
+  @include md-min {
     padding: 20px 0;
   }
 }
 
 .form-wave {
   width: 100vw;
-  margin-bottom: -100px;
+  margin-bottom: -30px;
 
-  @include xs {
-    margin-bottom: -50px;
+  @include md-min {
+    margin-bottom: -150px;
   }
 }
 
 .form__inner {
-  @include xs {
+  @include md-max {
     padding: 0 20px;
   }
 }
@@ -31,7 +30,7 @@
   margin: 0 auto;
   justify-content: center;
 
-  @include xs {
+  @include md-max {
     flex-direction: column;
   }
 }
@@ -42,7 +41,7 @@ h4.form__title {
   text-align: center;
   width: 100%;
 
-  @include xs {
+  @include md-max {
     padding: 0;
   }
 }
@@ -52,7 +51,7 @@ h4.form__title {
   display: flex;
   flex-direction: column;
 
-  @include xs {
+  @include md-max {
     width: 100%;
     margin: 0 auto;
   }
@@ -98,7 +97,7 @@ h4.form__title {
 .form__meta-icon {
   padding: 0 20px;
 
-  @include xs {
+  @include md-max {
     padding: 0;
   }
 
@@ -106,7 +105,7 @@ h4.form__title {
     height: 30px;
     color: var(--main-color);
 
-    @include xs {
+    @include md-max {
       height: 20px;
       padding-right: 10px;
     }
@@ -123,7 +122,7 @@ h4.form__title {
     border-right: none;
     padding-bottom: 0;
 
-    @include xs {
+    @include md-max {
       margin-left: 20px;
     }
   }
@@ -137,7 +136,7 @@ h4.form__title {
   align-items: center;
   margin-left: 50px;
 
-  @include xs {
+  @include md-max {
     align-items: flex-start;
     flex-direction: row;
     justify-content: flex-start;
@@ -146,7 +145,7 @@ h4.form__title {
 }
 
 .form__meta-text {
-  @include xs {
+  @include md-max {
     font-size: 12px;
   }
 }

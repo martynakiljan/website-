@@ -1,4 +1,4 @@
-@import '../../assets/styles/media-queries.scss';
+@import "../../assets/styles/media-queries.scss";
 
 .nav {
   position: fixed;
@@ -17,7 +17,7 @@
   color: var(--white-smoke-color);
   padding: 20px 0;
 
-  @include xs {
+  @include md-max {
     flex-direction: row;
     padding: 10px 0;
     height: 100%;
@@ -29,13 +29,13 @@
 .nav__menu {
   width: 100%;
 
-  @include xs {
+  @include md-max {
     height: 0;
   }
 }
 
 .nav__logo-burger {
-  @include xs {
+  @include md-max {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -53,7 +53,7 @@
   height: 100%;
   border-left: 1px solid var(--second-color);
 
-  @include xs {
+  @include md-max {
     display: none;
   }
 }
@@ -62,14 +62,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
   border-right: 1px solid var(--gray-light-color);
 
   &:last-child {
     border-right: none;
   }
 
-  @include xs {
+  @include md-max {
     padding: 0 10px;
 
     svg {
@@ -82,23 +81,25 @@
   padding: 0 20px;
 
   svg {
-    height: 30px;
+    height: 20px;
+
     color: var(--gray-light-color);
 
-    @include xs {
+    @include md-max {
       height: 20px;
       padding: 0 7px;
     }
   }
 
-  @include xs {
+  @include md-max {
     padding: 0;
   }
 }
 
 .nav__meta-text {
   text-align: right;
-  @include xs {
+
+  @include md-max {
     font-size: 10px;
   }
 }
@@ -125,7 +126,7 @@
 }
 
 .nav__meta-icon-facebook {
-  @include xs {
+  @include md-max {
     display: none;
   }
 }

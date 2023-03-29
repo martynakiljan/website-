@@ -1,11 +1,11 @@
-@import '../../assets/styles/basic.scss';
-@import '../../assets/styles/media-queries.scss';
+@import "../../assets/styles/basic.scss";
+@import "../../assets/styles/media-queries.scss";
 
 .hamburger-react {
   display: none;
   z-index: 1000;
 
-  @include xs {
+  @include md-max {
     display: block;
     margin-left: auto;
     margin-right: 20px;

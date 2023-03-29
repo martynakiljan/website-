@@ -105,7 +105,7 @@ const Form = () => {
           />
         </svg>
       </div>
-      <div className="form-container" id="contact">
+      <div className="form-container section" id="contact">
         <div className="form__inner">
           <h4 className="title form__title">Contact us!</h4>
           <div className="form__inner--inner">
