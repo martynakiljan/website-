@@ -20,9 +20,9 @@ export const inputs = [
     text: "Email:",
   },
   {
-    id: "textarea",
+    id: "message",
     type: "text",
     name: "message",
-    text: "Your Message:"
+    text: "Your Message:",
   },
 ];

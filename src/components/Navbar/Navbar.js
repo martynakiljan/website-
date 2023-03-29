@@ -8,17 +8,18 @@ import Menu from "../Menu/Menu";
 import Burger from "../Burger/Burger";
 import "../Menu/menu.scss";
 import React, { useState, useContext, useEffect } from "react";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import Context from "../../utilis/context";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { locale, selectLanguage } = useContext(Context);
   const [isDeLang, setIsDeLang] = useState(true);
+  const location = useLocation();
 
-  console.log(isDeLang);
-
-  console.log(isDeLang);
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
 
   useEffect(() => {
     if (locale === "de") {
@@ -49,18 +50,15 @@ const Navbar = () => {
               </div>
               <div className="lang-container" value={locale}>
                 {isDeLang ? (
-                  <button className="lang" value="de" onClick={selectLanguage}>
-                    DE
-                  </button>
-                ) : (
                   <button className="lang" value="en" onClick={selectLanguage}>
                     EN
                   </button>
+                ) : (
+                  <button className="lang" value="de" onClick={selectLanguage}>
+                    DE
+                  </button>
                 )}
               </div>
-              {/* <div className="nav__meta-icon nav__meta-icon-language">
-                <FontAwesomeIcon icon={faGlobe} />
-              </div> */}
             </div>
           </div>
         </div>

@@ -27,11 +27,11 @@ export const validateEmail = (email, setFormErrors) => {
   }
 };
 
-// export const validateTextArea (textarea, setFormErrors) => {
-//   if (textarea.length < 3) {
-//     setFormErrors("firstName", "Your Message cannot be empty");
-//   } else {
-//     setFormErrors("textarea", "");
-//     return true;
-//   }
-// };
+export const validateTextArea = (message, setFormErrors) => {
+  if (message.length < 3) {
+    setFormErrors("message", "Your Message cannot be empty");
+  } else {
+    setFormErrors("message", "");
+    return true;
+  }
+};

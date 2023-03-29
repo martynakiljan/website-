@@ -11,6 +11,7 @@ import {
   validateFirstName,
   validateLastName,
   validateEmail,
+  validateTextArea,
 } from "../../utilis/validateInputs";
 
 const Form = () => {
@@ -41,6 +42,9 @@ const Form = () => {
       case "email":
         validateEmail(value, setFormErrorsWrapper);
         break;
+      case "message":
+        validateTextArea(value, setFormErrorsWrapper);
+        break;
       default:
         break;
     }
@@ -54,9 +58,10 @@ const Form = () => {
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = () => {
+    console.log("handle submit");
     if (isValidForm()) {
-      event.preventDefault();
+      console.log("isValid");
       alert("ok");
     }
   };
@@ -118,12 +123,12 @@ const Form = () => {
                   value={formData.name}
                   formErrors={formErrors[name]}
                   onChange={(event) => handleEdit(name, event.target.value)}
-      
+                  id={id}
                 />
               ))}
 
               <button
-                onClick={handleSubmit}
+                onClick={(event) => handleSubmit()}
                 className="btn-submit"
                 type="submit"
                 disabled={!isValidForm()}
