@@ -1,0 +1,100 @@
+@import "../../assets/styles/helper-mixin.scss";
+
+div.team {
+  min-height: 40vh;
+  margin-top: 50px;
+
+  @include md-min {
+    min-height: 30vh;
+    margin-top: 200px;
+    background: var(--second-color);
+  }
+}
+
+.team__inner {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-top: 20px;
+
+  @include md-min {
+    min-height: 30vh;
+    position: relative;
+    padding-top: 20px;
+  }
+}
+
+h2.team__title {
+  & span {
+    font-size: 30px;
+    color: var(--second-color);
+    font-weight: bold;
+  }
+
+  &.desktop {
+    display: none;
+
+    @include md-min {
+      display: block;
+      right: 0px;
+      right: 0;
+      top: -80%;
+      position: absolute;
+    }
+  }
+
+  &.mobile {
+    display: block;
+    @include md-min {
+      display: none;
+    }
+  }
+}
+
+.team__photo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  width: 150px;
+  min-height: 200px;
+  margin: 20px 0;
+  border: 2px solid white;
+  width: 150px;
+
+  @include sm-min {
+    width: 350px;
+    min-height: 550px;
+  }
+
+  @include md-min {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    position: absolute;
+    top: -60%;
+    min-width: 350px;
+    min-height: 400px;
+    padding: 0;
+  }
+}
+
+.team__photo-first {
+  background-image: url("../../assets/images/images-team/team-photo-1.jpg");
+  right: 0;
+
+  @include md-max {
+    right: 0px;
+  }
+}
+
+.team__photo-second {
+  background-image: url("../../assets/images/images-team/team-photo-2.jpg");
+  right: 38%;
+
+  @include lg-min {
+    right: 35%;
+  }
+
+  @include xl-min {
+    right: 33%;
+  }
+}
