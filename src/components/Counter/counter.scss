@@ -22,7 +22,6 @@
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  margin: 0 10px;
 
   @include md-min {
     padding: 0 20px;
@@ -40,7 +39,6 @@
     font-size: 60px;
     padding: 0 10px;
   }
-
 }
 
 .counter__text {

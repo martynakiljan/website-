@@ -17,7 +17,6 @@ import Context from "./utilis/context";
 import { IntlProvider } from "react-intl";
 import Deutsch from "../src/lang/deLang.json";
 import English from "../src/lang/enLang.json";
-import Team from "../src/components/Team/Team.js"
 const local = navigator.language;
 
 let lang;
