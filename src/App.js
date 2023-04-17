@@ -51,30 +51,32 @@ const App = () => {
   }, []);
 
   return (
-    <Context.Provider value={{ locale, selectLanguage }}>
-      <IntlProvider messages={messages} locale={locale}>
-        {loading ? (
-          <div className="beatloader">
-            <BeatLoader color={"#f6ce4a"} loading={loading} size={10} />
-          </div>
-        ) : (
-          <div>
-            <Header />
-            <div className="page">
-              <div className="page__inner">
-                <About />
-                <Services />
-                <Slider />
-                <Counter />
-              </div>
+    <React.StrictMode>
+      <Context.Provider value={{ locale, selectLanguage }}>
+        <IntlProvider messages={messages} locale={locale}>
+          {loading ? (
+            <div className="beatloader">
+              <BeatLoader color={"#f6ce4a"} loading={loading} size={10} />
             </div>
-            <Form />
-            <ScrollToTop smooth />
-            <Footer />
-          </div>
-        )}
-      </IntlProvider>
-    </Context.Provider>
+          ) : (
+            <div>
+              <Header />
+              <div className="page">
+                <div className="page__inner">
+                  <About />
+                  <Services />
+                  <Slider />
+                  <Counter />
+                </div>
+              </div>
+              <Form />
+              <ScrollToTop smooth />
+              <Footer />
+            </div>
+          )}
+        </IntlProvider>
+      </Context.Provider>
+    </React.StrictMode>
   );
 };
 
