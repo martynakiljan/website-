@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/website-matbau/static/css/main.e50c6f7d.css",
+    "main.css": "/website-matbau/static/css/main.40f0b849.css",
     "main.js": "/website-matbau/static/js/main.a9aeaeb3.js",
     "static/media/team-photo-1.jpg": "/website-matbau/static/media/team-photo-1.c49fd5e59c93549d800e.jpg",
     "static/media/slider-img-3.jpg": "/website-matbau/static/media/slider-img-3.b4aa3d809deadc5aa57d.jpg",
@@ -19,11 +19,11 @@
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/website-matbau/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "static/media/logo.png": "/website-matbau/static/media/logo.85385affd2deba4401ad.png",
     "index.html": "/website-matbau/index.html",
-    "main.e50c6f7d.css.map": "/website-matbau/static/css/main.e50c6f7d.css.map",
+    "main.40f0b849.css.map": "/website-matbau/static/css/main.40f0b849.css.map",
     "main.a9aeaeb3.js.map": "/website-matbau/static/js/main.a9aeaeb3.js.map"
   },
   "entrypoints": [
-    "static/css/main.e50c6f7d.css",
+    "static/css/main.40f0b849.css",
     "static/js/main.a9aeaeb3.js"
   ]
 }
