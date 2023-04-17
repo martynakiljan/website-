@@ -13,6 +13,7 @@ import {
   validateEmail,
   validateTextArea,
 } from "../../utilis/validateInputs";
+import { FormattedMessage } from "react-intl";
 
 const Form = () => {
   const defaultFormData = {
@@ -112,7 +113,10 @@ const Form = () => {
       </div>
       <div className="form-container section" id="contact">
         <div className="form__inner">
-          <h4 className="title form__title">Contact us!</h4>
+          <h4 className="title form__title">
+            {" "}
+            <FormattedMessage id="contact-title"></FormattedMessage>
+          </h4>
           <div className="form__inner--inner">
             <form className="form" ref={form} onSubmit={sendEmail}>
               {inputs.map(({ id, text, name }) => (
@@ -134,7 +138,7 @@ const Form = () => {
                 disabled={!isValidForm()}
               >
                 {" "}
-                SEND
+                <FormattedMessage id="button-form"></FormattedMessage>
               </button>
             </form>
 
@@ -144,12 +148,24 @@ const Form = () => {
                   <FontAwesomeIcon icon={faPhone} />
                 </div>
                 <div className="form__meta-text">
-                  <p className="form__meta-text form__meta-phone">
-                    +41779953234
-                  </p>
-                  <p className="form__meta-text form__meta-email">
-                    company@wp.pl
-                  </p>
+                  <a
+                    className="form__meta-text form__meta-phone"
+                    href="tel:+41779280504"
+                  >
+                    +41 77 928 05 04
+                  </a>
+                  <a
+                    className="form__meta-text form__meta-phone"
+                    href="tel: +41779475177"
+                  >
+                    +41 77 947 51 77
+                  </a>
+                  <a
+                    className="form__meta-text form__meta-email"
+                    href="mailto:info@zweimbau.ch"
+                  >
+                    info@zweimbau.ch
+                  </a>
                 </div>
               </div>
               <div className="form__meta-item">
@@ -158,10 +174,10 @@ const Form = () => {
                 </div>
                 <div className="form__meta-text">
                   <p className="form__meta-text form__meta-address">
-                    Zürcherstrasse 23
+                    Zentralstrasse 1c
                   </p>
                   <p className="form__meta-text form__meta-address-street">
-                    45-345 Zürich
+                    5623 Boswil
                   </p>
                 </div>
               </div>{" "}

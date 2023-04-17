@@ -1,9 +1,19 @@
-@import "../../assets/styles/media-queries.scss";
+@import '../../assets/styles/media-queries.scss';
 
 .services {
   @include md-min {
     padding-top: 87px;
   }
+
+  li {
+    list-style: disc;
+    padding: 5px 0;
+    margin-left: 20px;
+  }
+}
+
+.services__inner-text {
+  text-align: left;
 }
 
 .services__items-icons {
@@ -14,39 +24,39 @@
   flex-direction: column;
 
   margin: 50px 0;
-
-  @include md-min {
-    margin: 20px 0;
-  }
 }
 
 .services__service {
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  align-items: center;
-  padding: 0 20px;
 
   svg {
     font-size: 50px;
     margin: 50px 0;
     color: var(--gray-light-color);
+
+    @include sm-min {
+      font-size: 75px;
+    }
   }
 }
 
 .services__items-icons__inner {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
 
   @include md-max {
     flex-direction: column;
-    padding: 20px;
   }
 }
 
-.services__paragraph {
-  line-height: 2;
-
-  @include md-min {
-    text-align: center;
-  }
+.services-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: var(--main-color);
 }

@@ -1,5 +1,5 @@
-@import "../../assets/styles/media-queries.scss";
-@import "../../assets/styles/helper-mixin.scss";
+@import '../../assets/styles/media-queries.scss';
+@import '../../assets/styles/helper-mixin.scss';
 
 .about {
   min-height: 30vh;
@@ -20,15 +20,24 @@
 
 .about__quote-text {
   padding: 40px 0;
-  font-size: 30px;
+  font-size: 26px;
   font-style: italic;
   color: var(--main-color);
+  text-align: right;
+
+  @include xs-max {
+    font-size: 20px;
+  }
 }
 
 .about__left-side {
   @include md-min {
     width: 65%;
   }
+}
+.about__right-side {
+  width: 100%;
+  padding: 0 20px;
 }
 
 .about__left-title {
@@ -42,7 +51,7 @@
     position: absolute;
     left: 0;
     bottom: -7px;
-    content: "";
+    content: '';
     width: 100px;
     border-bottom: 2px solid var(--second-color);
   }
@@ -72,7 +81,7 @@
   line-height: 1.5;
 }
 
-@import "../../assets/styles/media-queries.scss";
+@import '../../assets/styles/media-queries.scss';
 
 .about-distinction-tiles__inner {
   display: flex;
@@ -111,15 +120,15 @@
 }
 
 .about-distinction-tile__first {
-  background-image: url("../../assets/images/images-tiles/img-1.jpg");
+  background-image: url('../../assets/images/images-tiles/img-1.jpg');
 }
 
 .about-distinction-tile__second {
-  background-image: url("../../assets/images/images-tiles/img-2.jpg");
+  background-image: url('../../assets/images/images-tiles/img-2.jpg');
 }
 
 .about-distinction-tile__third {
-  background-image: url("../../assets/images/images-tiles/img-3.jpg");
+  background-image: url('../../assets/images/images-tiles/img-3.jpg');
 }
 
 .about-distinction-tile__content {
@@ -140,7 +149,7 @@
     position: absolute;
     left: 0;
     bottom: -7px;
-    content: "";
+    content: '';
     width: 100px;
     border-bottom: 2px solid var(--second-color);
   }

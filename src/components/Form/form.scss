@@ -1,8 +1,9 @@
-@import "../../assets/styles/media-queries.scss";
+@import '../../assets/styles/media-queries.scss';
 
 .form-container {
   background-color: var(--second-color);
   margin-top: -5px;
+  color: var(--main-color);
   margin-bottom: 30px;
   @include md-min {
     padding: 20px 0;
@@ -13,8 +14,12 @@
   width: 100vw;
   margin-bottom: -30px;
 
+  @include xs-min {
+    margin-bottom: -100px;
+  }
+
   @include md-min {
-    margin-bottom: -150px;
+    margin-bottom: -158px;
   }
 }
 
@@ -40,6 +45,8 @@ h4.form__title {
   margin: 0 auto;
   text-align: center;
   width: 100%;
+  color: var(--main-color);
+  padding-bottom: 10px;
 
   @include md-max {
     padding: 0;
@@ -83,15 +90,29 @@ h4.form__title {
   min-height: 20px;
   padding: 5px 0;
   background: var(--white-color);
+  color: var(--main-color);
 }
 
 .text-area {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   min-height: 100px;
 }
+
+.form__meta-email,
+.form__meta-phone {
+  display: block;
+  cursor: pointer;
+  color: var(--main-color);
+}
+
 .form__meta-email,
 .form__meta-address-street {
+  padding: 5px 0;
   color: var(--main-color);
+}
+
+.form__meta-phone {
+  padding: 2px;
 }
 
 .form__meta-icon {
@@ -114,8 +135,9 @@ h4.form__title {
 
 .form__meta-item {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding-bottom: 30px;
 
   &:last-child {
@@ -123,6 +145,15 @@ h4.form__title {
     padding-bottom: 0;
 
     @include md-max {
+      margin-bottom: 20px;
+    }
+
+    @include md-min {
+      flex-direction: row;
+      margin-left: 0 !important;
+    }
+
+    @include sm-min {
       margin-left: 20px;
     }
   }
@@ -133,14 +164,16 @@ h4.form__title {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  margin-left: 50px;
+  align-items: flex-start;
 
   @include md-max {
     align-items: flex-start;
-    flex-direction: row;
     justify-content: flex-start;
     margin-left: 0;
+
+    @include sm-min {
+      flex-direction: row;
+    }
   }
 }
 

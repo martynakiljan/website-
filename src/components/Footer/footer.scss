@@ -1,9 +1,9 @@
-@import "../../assets/styles/media-queries.scss";
-@import "../../assets/styles/basic.scss";
+@import '../../assets/styles/media-queries.scss';
+@import '../../assets/styles/basic.scss';
 
 .footer {
   height: 10vh;
-  color: var(--gray-color);
+  color: var(--main-color);
 }
 
 .footer__inner {
@@ -15,9 +15,10 @@
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     background-color: var(--main-color);
+
     height: 1px;
     top: 50%;
   }

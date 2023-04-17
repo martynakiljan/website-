@@ -1,4 +1,4 @@
-@import "../../assets/styles/media-queries.scss";
+@import '../../assets/styles/media-queries.scss';
 
 .menu {
   height: 100%;
@@ -41,7 +41,7 @@
   text-transform: uppercase;
   cursor: pointer;
   color: var(--gray-color);
-  padding: 0 40px;
+  padding: 0 30px;
   font-weight: 600;
   height: 100%;
   display: flex;

@@ -11,13 +11,11 @@ const Header = () => {
         <div className="header__mask"></div>
         <div className="header__title">
           <h1 className="header__text-first">
-            <FormattedMessage
-              id="app.header"
-              defaultMessage="Learn React"
-            ></FormattedMessage>
+            <FormattedMessage id="header-main-title"></FormattedMessage>
           </h1>
-
-          <h2 className="header__text-second">IHR BAU PARTNER</h2>
+          <h2 className="header__text-second">
+            <FormattedMessage id="header-subtitle"></FormattedMessage>
+          </h2>
         </div>
       </header>
     </>

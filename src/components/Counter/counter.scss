@@ -1,15 +1,17 @@
-@import "../../assets/styles/media-queries.scss";
+@import '../../assets/styles/media-queries.scss';
 
 .counter__inner {
-  padding: 50px 0;
+  padding: 20px 0;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   z-index: 100;
 
-  @include md-min {
+  @include xs-min {
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -29,17 +31,16 @@
 }
 
 .counter__count {
-  font-size: 60px;
-  color: var(--second-color);
+  font-size: 30px;
+  color: var(--main-color);
+
   font-weight: bold;
 
-  @include md-max {
-    font-size: 30px;
+  @include sm-min {
+    font-size: 60px;
+    padding: 0 10px;
   }
 
-  @include xl-min {
-    font-size: 100px;
-  }
 }
 
 .counter__text {

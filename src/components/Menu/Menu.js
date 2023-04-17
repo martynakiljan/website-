@@ -1,5 +1,6 @@
 /** @format */
 import "./menu.scss";
+import { FormattedMessage } from "react-intl";
 
 const Menu = ({ isOpen }) => {
   return (
@@ -8,22 +9,22 @@ const Menu = ({ isOpen }) => {
         <ul className="menu__list">
           <li className="menu__item">
             <a className="menu__link" href="#home">
-              Home
+              <FormattedMessage id="menu-item-1"></FormattedMessage>
             </a>
           </li>
           <li className="menu__item">
             <a className="menu__link" href="#about">
-              About us
+              <FormattedMessage id="menu-item-2"></FormattedMessage>
             </a>
           </li>
           <li className="menu__item">
             <a className="menu__link" href="#service">
-              Our services
+              <FormattedMessage id="menu-item-3"></FormattedMessage>
             </a>
           </li>
           <li className="menu__item">
             <a className="menu__link" href="#contact">
-              Contact
+              <FormattedMessage id="menu-item-4"></FormattedMessage>
             </a>
           </li>
         </ul>
