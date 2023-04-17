@@ -48,6 +48,15 @@
   justify-content: center;
   align-items: center;
 
+  @include md-max {
+    width: 100%;
+
+    a {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
   &:hover {
     .menu__link {
       color: var(--second-color);
