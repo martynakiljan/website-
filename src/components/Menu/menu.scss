@@ -57,6 +57,10 @@
     }
   }
 
+  @include md-min {
+    padding: 20px;
+  }
+
   &:hover {
     .menu__link {
       color: var(--second-color);
