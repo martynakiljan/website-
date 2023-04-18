@@ -13,7 +13,6 @@ const Menu = ({ isOpen, locale, isDeLang, selectLanguage, setIsOpen }) => {
       // If the menu is open and the clicked target is not within the menu,
       // then close the menu
       if (!isOpen && ref.current && !ref.current.contains(e.target)) {
-        console.log("zamknij");
         setIsOpen(false);
       }
     };

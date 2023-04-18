@@ -4,7 +4,7 @@
   background-color: var(--second-color);
   margin-top: -5px;
   color: var(--main-color);
-  margin-bottom: 30px;
+
   @include md-min {
     padding: 20px 0;
   }
@@ -67,6 +67,7 @@ h4.form__title {
 .text-area {
   padding-top: 10px;
 }
+
 .form-control {
   border: var(--color-white);
 }

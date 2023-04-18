@@ -23,6 +23,7 @@ const Form = () => {
   };
   const [formData, setFormData] = useState(defaultFormData);
   const [formErrors, setFormErrors] = useState(defaultFormData);
+  const [isCompleteFormState, setIsCompleteFormState] = useState(false);
 
   const handleEdit = (name, value) => {
     validateInput(name, value);
@@ -52,19 +53,33 @@ const Form = () => {
   };
 
   const setFormErrorsWrapper = (name, value) => {
-    console.log(name, value);
     setFormErrors({
       ...formErrors,
       [name]: value,
     });
   };
 
+  const isNotEmptyForm = () => {
+    return Object.values(formData).every((x) => x === null || x === "");
+  };
+
   const handleSubmit = () => {
-    console.log("handle submit");
-    if (isValidForm()) {
-      console.log("isValid");
-      alert("ok");
+    // console.log("klik");
+    isNotEmptyForm();
+    if (!isValidForm() && isCompleteForm()) {
+      // console.log("isValid");
     }
+  };
+
+  const isCompleteForm = () => {
+    const completedForm = Object.entries(formData)
+      .filter(([k, v]) => k !== "id")
+      .every(([k, v]) => v !== "");
+
+    if (completedForm) {
+      setIsCompleteFormState(true);
+    }
+    return completedForm;
   };
 
   const isValidForm = () => {
@@ -72,6 +87,12 @@ const Form = () => {
       (currentValue) => currentValue === ""
     );
   };
+
+  // console.log(isValidForm());
+  // console.log(isNotEmptyForm());
+
+  // console.log(formData);
+  // console.log(formErrors);
 
   const form = useRef();
 
@@ -135,7 +156,7 @@ const Form = () => {
                 onClick={(event) => handleSubmit()}
                 className="btn-submit"
                 type="submit"
-                disabled={!isValidForm()}
+                disabled={!isValidForm() && isNotEmptyForm()}
               >
                 {" "}
                 <FormattedMessage id="button-form"></FormattedMessage>

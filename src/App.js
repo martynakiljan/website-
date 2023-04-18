@@ -20,7 +20,7 @@ import English from "../src/lang/enLang.json";
 const local = navigator.language;
 
 let lang;
-if (local === "de") {
+if (local === "de-DE") {
   lang = Deutsch;
 } else {
   lang = English;
