@@ -23,7 +23,7 @@ const Navbar = () => {
   }, [location]);
 
   useEffect(() => {
-    if (locale === "de") {
+    if (locale === "de-DE") {
       setIsDeLang(true);
     } else {
       setIsDeLang(false);
