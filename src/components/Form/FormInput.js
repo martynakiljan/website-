@@ -1,6 +1,5 @@
 /** @format */
 const FormInput = ({ type, text, id, name, value, onChange, formErrors }) => {
-  console.log(id, name);
   return id === "message" ? (
     <>
       <label className="label">{text} </label>

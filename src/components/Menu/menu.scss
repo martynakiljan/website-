@@ -41,7 +41,6 @@
   text-transform: uppercase;
   cursor: pointer;
   color: var(--gray-color);
-  padding: 0 30px;
   font-weight: 600;
   height: 100%;
   display: flex;
@@ -57,10 +56,6 @@
     }
   }
 
-  @include md-min {
-    padding: 20px;
-  }
-
   &:hover {
     .menu__link {
       color: var(--second-color);
@@ -70,4 +65,24 @@
 
 .menu__link {
   color: var(--white-smoke-color);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  @include md-min {
+    padding: 20px;
+  }
+}
+
+.menu-desktop {
+  @include md-max {
+    display: none;
+  }
+}
+
+.menu-mobile {
+  @include md-min {
+    display: none;
+  }
 }

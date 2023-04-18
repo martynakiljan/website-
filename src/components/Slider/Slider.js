@@ -10,6 +10,7 @@ const Slider = () => {
       showArrows={true}
       className="section"
       preventMovementUntilSwipeScrollTolerance={true}
+      swipeScrollTolerance={50}
     >
       <div className="slider__img slider__img-1"></div>
       <div className="slider__img slider__img-2"></div>

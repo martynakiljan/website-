@@ -7,12 +7,13 @@ import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import Menu from "../Menu/Menu";
 import Burger from "../Burger/Burger";
 import "../Menu/menu.scss";
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect, useRef } from "react";
 import Context from "../../utilis/context";
 import { useLocation } from "react-router-dom";
 import Lang from "../Lang/Lang";
 
 const Navbar = () => {
+  const ref = useRef();
   const [isOpen, setIsOpen] = useState(false);
   const { locale, selectLanguage } = useContext(Context);
   const [isDeLang, setIsDeLang] = useState(true);
@@ -30,9 +31,27 @@ const Navbar = () => {
     }
   }, [locale]);
 
+  useEffect(() => {
+    const checkIfClickedOutside = (e) => {
+      // If the menu is open and the clicked target is not within the menu,
+      // then close the menu
+      console.log("klik");
+      if (isOpen && ref.current && !ref.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", checkIfClickedOutside);
+
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("mousedown", checkIfClickedOutside);
+    };
+  }, [setIsOpen]);
+
   return (
     <Context.Provider>
-      <div className="nav">
+      <div className="nav" ref={ref}>
         <div className="nav__inner">
           <div className="nav__logo-burger">
             <a className="nav__logo-logo" href="#home"></a>
@@ -45,6 +64,7 @@ const Navbar = () => {
               isDeLang={isDeLang}
               locale={locale}
               selectLanguage={selectLanguage}
+              ref={ref}
             />
           </div>
           <div className="nav__meta">

@@ -29,7 +29,6 @@ if (local === "de") {
 const App = () => {
   const [locale, setLocale] = useState(local);
   const [messages, setMessages] = useState(lang);
-  console.log(messages);
 
   function selectLanguage(e) {
     const newLocale = e.target.value;

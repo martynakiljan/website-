@@ -4,7 +4,7 @@ import React from "react";
 
 const Lang = ({ locale, isDeLang, selectLanguage }) => {
   return (
-    <div className="lang-container" value={locale}>
+    <li className="menu__item" value={locale}>
       {isDeLang ? (
         <button className="lang" value="en" onClick={selectLanguage}>
           EN
@@ -14,7 +14,7 @@ const Lang = ({ locale, isDeLang, selectLanguage }) => {
           DE
         </button>
       )}
-    </div>
+    </li>
   );
 };
 
