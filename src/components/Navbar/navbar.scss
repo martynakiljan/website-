@@ -50,9 +50,9 @@
 .nav__menu {
   width: 100%;
 
-  @include md-max {
-    height: 0;
-  }
+  // @include md-max {
+  //   height: 0;
+  // }
 }
 
 .nav__logo-burger {

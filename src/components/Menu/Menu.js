@@ -3,12 +3,32 @@ import "./menu.scss";
 import { FormattedMessage } from "react-intl";
 import Context from "../../utilis/context";
 import Lang from "../Lang/Lang";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
-const Menu = ({ isOpen, locale, isDeLang, selectLanguage }) => {
+const Menu = ({ isOpen, locale, isDeLang, selectLanguage, setIsOpen }) => {
+  const ref = useRef();
+
+  useEffect(() => {
+    const checkIfClickedOutside = (e) => {
+      // If the menu is open and the clicked target is not within the menu,
+      // then close the menu
+      if (!isOpen && ref.current && !ref.current.contains(e.target)) {
+        console.log("zamknij");
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", checkIfClickedOutside);
+
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("mousedown", checkIfClickedOutside);
+    };
+  }, [setIsOpen]);
+
   return (
     <Context.Provider>
-      <div className="menu-mobile">
+      <div className="menu-mobile" ref={ref}>
         {isOpen && (
           <div
             className={`menu ${
@@ -75,12 +95,11 @@ const Menu = ({ isOpen, locale, isDeLang, selectLanguage }) => {
                   <FormattedMessage id="menu-item-4"></FormattedMessage>
                 </a>
               </li>
-                <Lang
-                  isDeLang={isDeLang}
-                  selectLanguage={selectLanguage}
-                  locale={locale}
-                />
-      
+              <Lang
+                isDeLang={isDeLang}
+                selectLanguage={selectLanguage}
+                locale={locale}
+              />
             </ul>
           </div>
         </div>

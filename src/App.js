@@ -65,7 +65,6 @@ const App = () => {
                   <About />
                   <Services />
                   <Slider />
-                  <Counter />
                 </div>
               </div>
               <Form />

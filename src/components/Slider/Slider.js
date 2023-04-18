@@ -10,13 +10,16 @@ const Slider = () => {
       showArrows={true}
       className="section"
       preventMovementUntilSwipeScrollTolerance={true}
-      swipeScrollTolerance={50}
+      swipeScrollTolerance={100}
+      infiniteLoop={true}
     >
       <div className="slider__img slider__img-1"></div>
       <div className="slider__img slider__img-2"></div>
       <div className="slider__img slider__img-3"></div>
       <div className="slider__img slider__img-4"></div>
       <div className="slider__img slider__img-5"></div>
+      <div className="slider__img slider__img-6"></div>
+      <div className="slider__img slider__img-7"></div>
     </Carousel>
   );
 };
