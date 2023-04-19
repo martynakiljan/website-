@@ -73,7 +73,15 @@
   box-shadow: none;
   height: 15px !important;
   width: 15px !important;
+
+  @include md-max {
+    height: 12px !important;
+    width: 12px !important;
+    margin: 0 4px !important;
+
+  }
 }
+
 
 .carousel .carousel-status {
   display: none;

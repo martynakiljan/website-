@@ -4,6 +4,8 @@ import { FormattedMessage } from "react-intl";
 import Context from "../../utilis/context";
 import Lang from "../Lang/Lang";
 import React, { useEffect, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 
 const Menu = ({ isOpen, locale, isDeLang, selectLanguage, setIsOpen }) => {
   const ref = useRef();
@@ -56,11 +58,17 @@ const Menu = ({ isOpen, locale, isDeLang, selectLanguage, setIsOpen }) => {
                     <FormattedMessage id="menu-item-4"></FormattedMessage>
                   </a>
                 </li>
-                <Lang
-                  isDeLang={isDeLang}
-                  selectLanguage={selectLanguage}
-                  locale={locale}
-                />
+                <div className="menu__mobile-item-bottom">
+                  <Lang
+                    isDeLang={isDeLang}
+                    selectLanguage={selectLanguage}
+                    locale={locale}
+                    className="item"
+                  />
+                  <div className="nav__meta-icon nav__meta-icon-facebook item">
+                    <FontAwesomeIcon icon={faFacebookF} />
+                  </div>
+                </div>
               </ul>
             </div>
           </div>

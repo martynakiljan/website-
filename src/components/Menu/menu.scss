@@ -88,3 +88,28 @@
     display: none;
   }
 }
+
+.menu__mobile-item-bottom {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  align-items: baseline;
+
+  .nav__meta-icon-facebook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item {
+    padding: 20px;
+    font-size: 12px;
+  }
+
+  .lang,
+  svg {
+    font-size: 12px;
+    height: 12px;
+  }
+}

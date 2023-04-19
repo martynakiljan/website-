@@ -1,10 +1,10 @@
 /** @format */
-import "./lang.scss"
+import "./lang.scss";
 import React from "react";
 
 const Lang = ({ locale, isDeLang, selectLanguage }) => {
   return (
-    <l className="menu__item" value={locale}>
+    <li className="menu__item-lang" value={locale}>
       {isDeLang ? (
         <button className="lang" value="en" onClick={selectLanguage}>
           EN
@@ -14,7 +14,7 @@ const Lang = ({ locale, isDeLang, selectLanguage }) => {
           DE
         </button>
       )}
-    </l>
+    </li>
   );
 };
 
