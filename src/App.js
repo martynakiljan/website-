@@ -6,7 +6,6 @@ import About from "./components/About/About";
 import Slider from "./components/Slider/Slider";
 import Services from "./components/Services/Services";
 import BeatLoader from "react-spinners/BeatLoader";
-import Counter from "./components/Counter/Counter";
 import Form from "./components/Form/Form";
 import Footer from "./components/Footer/Footer";
 import "./assets/styles/basic.scss";

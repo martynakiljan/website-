@@ -28,6 +28,10 @@
   @include xs-max {
     font-size: 19px;
   }
+
+  @include md-min {
+    margin: 70px 0;
+  }
 }
 
 .about__left-side {
