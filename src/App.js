@@ -22,11 +22,9 @@ let lang;
 
 console.log(local);
 if (local === "de-DE") {
-  console.log("de");
   lang = Deutsch;
 } else {
   lang = English;
-  console.log("en");
 }
 
 const App = () => {
@@ -35,15 +33,10 @@ const App = () => {
 
   function selectLanguage(e) {
     const newLocale = e.target.value;
-    setLocale(newLocale);
-    console.log(newLocale);
-
     if (newLocale === "de-DE") {
-      console.log("ok");
       setMessages(Deutsch);
     } else {
       setMessages(English);
-      console.log("ok2");
     }
   }
   const [loading, setLoading] = useState(false);

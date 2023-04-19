@@ -91,7 +91,6 @@ const Form = () => {
           }
         })
         .catch((error) => setError(error.message));
-      alert("ok");
     }
   };
 
@@ -104,9 +103,6 @@ const Form = () => {
       (currentValue) => currentValue === ""
     );
   };
-
-  console.log(isValidForm());
-  console.log(isNotEmptyForm());
 
   const form = useRef();
   return (
