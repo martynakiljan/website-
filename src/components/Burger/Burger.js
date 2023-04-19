@@ -11,6 +11,7 @@ const Burger = ({ isOpen, setIsOpen }) => {
       direction="right"
       toggled={isOpen}
       toggle={setIsOpen}
+      onClick={() => setIsOpen((oldState) => !oldState)}
     >
       <span></span>
       <span></span>

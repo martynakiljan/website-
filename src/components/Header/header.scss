@@ -36,8 +36,8 @@
 }
 
 .header__text-first {
-  border-top: 10px dotted var(--white-smoke-color);
-  border-bottom: 10px dotted var(--white-smoke-color);
+  // border-top: 10px dotted var(--white-smoke-color);
+  // border-bottom: 10px dotted var(--white-smoke-color);
   padding: 10px 0;
   font-size: 70px;
   text-align: center;
@@ -45,6 +45,30 @@
 
   @include xs-max {
     font-size: 50px;
+  }
+
+  --size: 10px;
+
+  &::before {
+    content: "";
+    display: block;
+    height: var(--size);
+    background: radial-gradient(at center, var(--white-smoke-color) 50%, transparent 50.5%);
+    background-size: var(--size) var(--size);
+    background-position: left center;
+    background-repeat: space;
+  }
+
+  &::after {
+
+    content: "";
+    display: block;
+    height: var(--size);
+    background: radial-gradient(at center, var(--white-smoke-color) 50%, transparent 50.5%);
+    background-size: var(--size) var(--size);
+    background-position: left center;
+    background-repeat: space;
+
   }
 }
 

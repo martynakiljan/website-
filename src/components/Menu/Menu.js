@@ -17,7 +17,7 @@ const Menu = ({ isOpen, locale, isDeLang, selectLanguage, setIsOpen }) => {
       }
     };
 
-    document.addEventListener("mousedown", checkIfClickedOutside);
+    document.addEventListener("scroll", checkIfClickedOutside);
 
     return () => {
       // Cleanup the event listener
