@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/website-zweiMBau/static/css/main.cbd08103.css",
-    "main.js": "/website-zweiMBau/static/js/main.e9b5f5e6.js",
+    "main.css": "/website-zweiMBau/static/css/main.defd0c8e.css",
+    "main.js": "/website-zweiMBau/static/js/main.ad1a5aa2.js",
     "static/media/team-photo-1.jpg": "/website-zweiMBau/static/media/team-photo-1.c49fd5e59c93549d800e.jpg",
     "static/media/slider-img-3.jpg": "/website-zweiMBau/static/media/slider-img-3.b4aa3d809deadc5aa57d.jpg",
     "static/media/slider-img-2.jpg": "/website-zweiMBau/static/media/slider-img-2.a4689a3bec6652677768.jpg",
@@ -10,22 +10,26 @@
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/website-zweiMBau/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/slider-img-1.jpg": "/website-zweiMBau/static/media/slider-img-1.cde0f97800456e7a22f7.jpg",
     "static/media/slider-img-7.jpg": "/website-zweiMBau/static/media/slider-img-7.524c52bb684f77275174.jpg",
-    "static/media/slider-img-5.jpg": "/website-zweiMBau/static/media/slider-img-5.78f2eae6088f8bda508f.jpg",
     "static/media/slider-img-4.jpg": "/website-zweiMBau/static/media/slider-img-4.505ad2c4d648de288960.jpg",
-    "static/media/slider-img-6.jpg": "/website-zweiMBau/static/media/slider-img-6.1d695607e13876b4ea92.jpg",
+    "static/media/slider-img-9.jpg": "/website-zweiMBau/static/media/slider-img-9.531ae2e9c4cd217ac2a8.jpg",
+    "static/media/slider-img-11.jpg": "/website-zweiMBau/static/media/slider-img-11.c81f723ecb2190e44d16.jpg",
     "static/media/img-3.jpg": "/website-zweiMBau/static/media/img-3.9072c145c057f79cd3f8.jpg",
     "static/media/img-2.jpg": "/website-zweiMBau/static/media/img-2.d1aa6c202ace134f9e57.jpg",
     "static/media/fontawesome-webfont.eot": "/website-zweiMBau/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/website-zweiMBau/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
     "static/media/fontawesome-webfont.woff?v=4.7.0": "/website-zweiMBau/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/slider-img-8.jpg": "/website-zweiMBau/static/media/slider-img-8.080a2a453df6d60e6a3b.jpg",
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/website-zweiMBau/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/slider-img-10.jpg": "/website-zweiMBau/static/media/slider-img-10.7d109802352aadce5fa0.jpg",
+    "static/media/slider-img-5.jpg": "/website-zweiMBau/static/media/slider-img-5.e41ba7e1b250ec8c46b4.jpg",
+    "static/media/slider-img-6.jpg": "/website-zweiMBau/static/media/slider-img-6.b61abdeb5e5b8456ae3a.jpg",
     "static/media/logo-2023.png": "/website-zweiMBau/static/media/logo-2023.8e253b70b0ae59bd8472.png",
     "index.html": "/website-zweiMBau/index.html",
-    "main.cbd08103.css.map": "/website-zweiMBau/static/css/main.cbd08103.css.map",
-    "main.e9b5f5e6.js.map": "/website-zweiMBau/static/js/main.e9b5f5e6.js.map"
+    "main.defd0c8e.css.map": "/website-zweiMBau/static/css/main.defd0c8e.css.map",
+    "main.ad1a5aa2.js.map": "/website-zweiMBau/static/js/main.ad1a5aa2.js.map"
   },
   "entrypoints": [
-    "static/css/main.cbd08103.css",
-    "static/js/main.e9b5f5e6.js"
+    "static/css/main.defd0c8e.css",
+    "static/js/main.ad1a5aa2.js"
   ]
 }
