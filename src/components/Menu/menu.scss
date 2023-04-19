@@ -8,7 +8,7 @@
     opacity: 0;
     transition: visibility 0s, opacity 0.2s linear;
 
-    background-color: var(--main-color);
+    background-color: var(--white-smoke-color);
 
     &.menu-is-open {
       visibility: visible;
@@ -40,7 +40,7 @@
   display: block;
   text-transform: uppercase;
   cursor: pointer;
-  color: var(--gray-color);
+  color: var(--main-color);
   font-weight: 600;
   height: 100%;
   display: flex;
@@ -59,14 +59,14 @@
 
   &:hover {
     .menu__link {
-      color: var(--second-color);
+      font-weight: bold;
       transition: 0.3s color;
     }
   }
 }
 
 .menu__link {
-  color: var(--white-smoke-color);
+  color: var(--main-color);
   width: 100%;
   display: flex;
   justify-content: center;

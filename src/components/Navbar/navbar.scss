@@ -4,7 +4,7 @@
   position: fixed;
   z-index: 1111;
   width: 100%;
-  background-color: var(--main-color);
+  background-color: var(--white-smoke-color);
   max-width: 100vw;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
@@ -18,7 +18,6 @@
   background-position: center;
   max-width: 90px;
   max-height: 80px;
-  margin-left: 20px;
 
   @include md-min {
     min-width: 150px;
@@ -34,14 +33,17 @@
   justify-content: space-between;
   align-items: center;
   color: var(--white-smoke-color);
-  padding: 10px 0;
+
+  @include md-min {
+    padding: 10px 20px;
+  }
 
   @include md-max {
     flex-direction: row;
-    padding: 10px 0;
     height: 100%;
     flex-wrap: wrap;
     max-width: 100vw;
+    margin: 10px 20px;
   }
 }
 
@@ -70,7 +72,7 @@
   justify-content: flex-end;
   align-items: center;
   height: 100%;
-  border-left: 1px solid var(--second-color);
+  border-left: 1px solid var(--main-color);
 
   @include md-max {
     display: none;
@@ -134,7 +136,7 @@
 
 .nav__meta-icon-facebook svg,
 .nav__meta-icon-language svg {
-  color: var(--second-color);
+  color: var(--main-color);
   cursor: pointer;
 }
 
@@ -146,7 +148,7 @@
 
 .lang {
   cursor: pointer;
-  color: var(--second-color);
+  color: var(--main-color);
   background-color: transparent;
   font-size: 20px;
 

@@ -2,12 +2,9 @@
 
 .form-container {
   background-color: var(--second-color);
-  margin-top: -5px;
   color: var(--main-color);
+  padding: 20px 0;
 
-  @include md-min {
-    padding: 20px 0;
-  }
 }
 
 .form-wave {
@@ -42,11 +39,20 @@
 
 h4.form__title {
   display: block;
-  margin: 0 auto;
-  text-align: center;
   width: 100%;
+  margin-left: 20px;
   color: var(--main-color);
   padding-bottom: 10px;
+
+  @include md-min {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding-left: 20px;
+
+    &:after {
+      margin-left: 20px;
+    }
+  }
 
   @include md-max {
     padding: 0;

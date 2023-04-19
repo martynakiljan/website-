@@ -6,7 +6,7 @@ import { Twirl as Hamburger } from "hamburger-react";
 const Burger = ({ isOpen, setIsOpen }) => {
   return (
     <Hamburger
-      color="#e8e8e8"
+      color="#4d4b4a"
       className={`burger ${isOpen ? "menu-is-open " : ""}`}
       direction="right"
       toggled={isOpen}

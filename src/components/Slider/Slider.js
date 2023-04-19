@@ -20,6 +20,10 @@ const Slider = () => {
       <div className="slider__img slider__img-5"></div>
       <div className="slider__img slider__img-6"></div>
       <div className="slider__img slider__img-7"></div>
+      <div className="slider__img slider__img-8"></div>
+      <div className="slider__img slider__img-9"></div>
+      <div className="slider__img slider__img-10"></div>
+      <div className="slider__img slider__img-11"></div>
     </Carousel>
   );
 };
