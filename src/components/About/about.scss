@@ -35,9 +35,10 @@
     width: 65%;
   }
 }
+
 .about__right-side {
   width: 100%;
-  padding: 0 20px;
+  // padding: 0 20px;
 }
 
 .about__left-title {
@@ -109,7 +110,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   @include md-max {
@@ -136,6 +137,10 @@
   color: var(--white-smoke-color);
   bottom: 25px;
   padding: 0 25px;
+
+  @include xs-max {
+    left: -20px;
+  }
 }
 
 .about-distinction-tile__title {

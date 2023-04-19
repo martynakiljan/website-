@@ -9,7 +9,8 @@
   "about-us-text": "ZweiM Bau GmbH undertakes all exterior and interior construction work professionally and reliably. We guarantee high quality of execution and strict adherence to deadlines. Our specialties include drywall construction, ceiling construction, spatula work and painting. We are also specialized With numerous qualified employees, the company can respond to the wishes of the customers. In addition, you are able to do the work throughout Switzerland and thus find the best solution for every customer. The focus is on working closely with customers and discussing and solving problems on site.",
   "quote": "We are able to meet even the most demanding orders. Trust the professionals and use our services ",
   "team-title": "Meet the",
-  "team-title-desktop": "Meet the",
+  "team-title-2": "!",
+  "service-title": "Our Services",
   "distinctions-title": "WHAT MAKES US STAND OUT ?",
   "distinctions-text-1": "Ingenuity",
   "distinctions-text-2": "attention to detail",
@@ -24,6 +25,7 @@
   "service-1-5": "Acoustic systems",
   "service-1-6": "Fire protection panels",
   "service-1-7": "Special insulation",
+  "service-1-8": "ABRIB",
   "service-title-2": "Assembly work",
   "service-2-1": "Metalldecken",
   "service-2-2": "Metal ceilings",
@@ -34,5 +36,6 @@
   "service-title-3": "Renovation and remodeling",
   "service-3-1": "Demolition work",
   "service-3-2": "Floor and wall coverings of all kinds",
-  "service-3-3": "Painters of all kindst"
+  "service-3-3": "Painters of all kindst",
+  "form-confirmation": "Thanks! someone will contact you shortly."
 }

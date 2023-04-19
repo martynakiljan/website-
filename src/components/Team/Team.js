@@ -6,8 +6,9 @@ const Team = () => {
   return (
     <div class="team section">
       <h2 className="team__title title about__left-title">
-        <FormattedMessage id="team-title-desktop"></FormattedMessage>
+        <FormattedMessage id="team-title"></FormattedMessage>
         <span>team</span>
+        <FormattedMessage id="team-title-2"></FormattedMessage>
       </h2>
       <div className="team__inner">
         <div className="team__photo team__photo-first"></div>

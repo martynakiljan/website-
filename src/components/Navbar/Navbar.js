@@ -36,10 +36,7 @@ const Navbar = () => {
         <div className="nav__inner">
           <div className="nav__logo-burger">
             <a className="nav__logo-logo" href="#home"></a>
-            <Burger
-              isOpen={isOpen}
-              setIsOpen={setIsOpen}
-            />
+            <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
           <div className="nav__menu">
             <Menu

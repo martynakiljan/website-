@@ -1,12 +1,14 @@
 /** @format */
 
 import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import "./form.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faHouse } from "@fortawesome/free-solid-svg-icons";
 import { inputs } from "../../utilis/formInputsArr";
 import FormInput from "./FormInput";
+import axios from "axios";
+import { config } from "../../utilis/formInputsArr";
+
 import {
   validateFirstName,
   validateLastName,
@@ -16,14 +18,18 @@ import {
 import { FormattedMessage } from "react-intl";
 
 const Form = () => {
+  const { fieldsConfig } = config;
   const defaultFormData = {
     firstName: "",
     lastName: "",
     email: "",
+    message: "",
   };
+  const [mailSent, setmailSent] = useState(false);
+  const [error, setError] = useState(null);
   const [formData, setFormData] = useState(defaultFormData);
   const [formErrors, setFormErrors] = useState(defaultFormData);
-  const [isCompleteFormState, setIsCompleteFormState] = useState(false);
+  const [isFormCompleted, setIsFormCompleted] = useState(false);
 
   const handleEdit = (name, value) => {
     validateInput(name, value);
@@ -33,6 +39,7 @@ const Form = () => {
       [name]: value,
     }));
   };
+
   const validateInput = (name, value) => {
     switch (name) {
       case "firstName":
@@ -59,27 +66,33 @@ const Form = () => {
     });
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (isNotEmptyForm() || !isValidForm()) {
+      console.log("klik");
+      setIsFormCompleted(true);
+      axios({
+        method: "post",
+        url: `${process.env.REACT_APP_API}`,
+        headers: { "content-type": "application/json" },
+        data: formData,
+      })
+        .then((result) => {
+          if (result.data.sent) {
+            setmailSent(result.data.sent);
+            setError(false);
+          } else {
+            setError(true);
+          }
+        })
+        .catch((error) => setError(error.message));
+      alert("ok");
+    }
+  };
+
   const isNotEmptyForm = () => {
-    return Object.values(formData).every((x) => x === null || x === "");
-  };
-
-  const handleSubmit = () => {
-    // console.log("klik");
-    isNotEmptyForm();
-    if (!isValidForm() && isCompleteForm()) {
-      // console.log("isValid");
-    }
-  };
-
-  const isCompleteForm = () => {
-    const completedForm = Object.entries(formData)
-      .filter(([k, v]) => k !== "id")
-      .every(([k, v]) => v !== "");
-
-    if (completedForm) {
-      setIsCompleteFormState(true);
-    }
-    return completedForm;
+    return Object.entries(formData).some(([k, v]) => v === "");
   };
 
   const isValidForm = () => {
@@ -88,34 +101,10 @@ const Form = () => {
     );
   };
 
-  // console.log(isValidForm());
-  // console.log(isNotEmptyForm());
-
-  // console.log(formData);
-  // console.log(formErrors);
+  console.log(isValidForm());
+  console.log(isNotEmptyForm());
 
   const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    // emailjs
-    //   .sendForm(
-    //     "YOUR_SERVICE_ID",
-    //     "YOUR_TEMPLATE_ID",
-    //     form.current,
-    //     "YOUR_PUBLIC_KEY"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
-  };
-
   return (
     <>
       <div className="form-wave">
@@ -139,8 +128,8 @@ const Form = () => {
             <FormattedMessage id="contact-title"></FormattedMessage>
           </h4>
           <div className="form__inner--inner">
-            <form className="form" ref={form} onSubmit={sendEmail}>
-              {inputs.map(({ id, text, name }) => (
+            <form action="#" className="form" ref={form}>
+              {fieldsConfig.map(({ id, text, name }) => (
                 <FormInput
                   key={id}
                   text={text}
@@ -153,14 +142,25 @@ const Form = () => {
               ))}
 
               <button
-                onClick={(event) => handleSubmit()}
+                onSubmit={(event) => handleSubmit(event)}
                 className="btn-submit"
                 type="submit"
-                disabled={!isValidForm() && isNotEmptyForm()}
+                disabled={isNotEmptyForm() || !isValidForm()}
               >
                 {" "}
                 <FormattedMessage id="button-form"></FormattedMessage>
               </button>
+
+              <div>
+                {mailSent && <div className="sucsess">'success'</div>}
+                {error && <div className="error">'error'</div>}
+              </div>
+
+              {/* {isFormCompleted && (
+                <p className="form-confirmation">
+                  <FormattedMessage id="form-confirmation"></FormattedMessage>
+                </p>
+              )} */}
             </form>
 
             <div className="form__meta">

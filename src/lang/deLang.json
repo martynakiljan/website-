@@ -7,9 +7,10 @@
   "menu-item-4": "Kontakt",
   "about-us-title": "über uns",
   "about-us-text": "Die ZweiM Bau GmbH übernimmt professionell und zuverlässig jegliche Aussenund  Innenausbauarbeiten. Wir garantieren hohe Ausführungsqualität und strikte Termineinhaltung.Zu unseren Spezialgebieten gehören der Trockenbau, Deckenbau, Spachtelarbeiten und Maler. Zu dem sind wir spezialisiert Mit zahlreich qualifizierten Mitarbeitern kann die Firma auf die Wünsche der Kunden eingehen. Zudem ist man in der Lage, schweizweit die Arbeiten zu erledigen und so die beste Lösung für jeden Kunden zu finden. Im Vordergrund steht die enge Zusammenarbeit mit den Kunden und Probleme vor Ort zu besprechen und lösen. ",
-  "quote": " Wir sind in der Lage, auch die anspruchsvollsten Bestellungen zu erfüllen. Vertrauen Sie den Profis und nutzen Sie unsere Dienstleistungen ",
-  "team-title": "Meet the",
-  "team-title-desktop": "Meet the",
+  "quote": "Wir sind in der Lage, auch die anspruchsvollsten Bestellungen zu erfüllen. Vertrauen Sie den Profis und nutzen Sie unsere Dienstleistungen ",
+  "team-title": "Lerne das",
+  "team-title-2": "kennen!",
+  "service-title": "Unsere Leistungen",
   "distinctions-title": "was zeichnet uns aus?",
   "distinctions-text-1": "Einfallsreichtum",
   "distinctions-text-2": "AUFMERKSAMKEIT FÜRS DETAIL",
@@ -24,6 +25,7 @@
   "service-1-5": "Akustik-Systeme",
   "service-1-6": "Brandschutzverkleidungen",
   "service-1-7": "Spezielle Dämmungen",
+  "service-1-8": "ABRIB",
   "service-title-2": "Montagearbeiten",
   "service-2-1": "Metalldecken",
   "service-2-2": "Kühldecken",
@@ -33,5 +35,6 @@
   "service-title-3": "Renovation und Umbau",
   "service-3-1": "Abbrucharbeite",
   "service-3-2": "Boden- und Wandbeläge aller Art",
-  "service-3-3": "Maler/Lackierer aller Art"
+  "service-3-3": "Maler/Lackierer aller Art",
+  "form-confirmation": "Danke! jemand wird Sie in Kürze kontaktieren."
 }

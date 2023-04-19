@@ -11,7 +11,9 @@ import { FormattedMessage } from "react-intl";
 const Services = () => {
   return (
     <div className="services section" id="service">
-      <h3 className="title services__items-title">Our Services</h3>
+      <h3 className="title services__items-title">
+        <FormattedMessage id="service-title"></FormattedMessage>
+      </h3>
       <div className="services__items-icons">
         <div className="services__items-icons__inner">
           <div className="services__service">
@@ -49,6 +51,10 @@ const Services = () => {
               <li>
                 {" "}
                 <FormattedMessage id="service-1-7"></FormattedMessage>
+              </li>
+              <li>
+                {" "}
+                <FormattedMessage id="service-1-8"></FormattedMessage>
               </li>
             </ul>
           </div>

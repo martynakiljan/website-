@@ -64,9 +64,7 @@ h4.form__title {
   }
 }
 
-.text-area {
-  padding-top: 10px;
-}
+
 
 .form-control {
   border: var(--color-white);
@@ -92,6 +90,12 @@ h4.form__title {
   padding: 5px 0;
   background: var(--white-color);
   color: var(--main-color);
+  transition: 0.3s;
+
+  &:hover:not(:disabled) {
+    color: var(--white-color);
+    background-color: var(--main-color);
+  }
 }
 
 .text-area {
@@ -187,4 +191,14 @@ h4.form__title {
 .form-error {
   color: var(--main-color);
   padding: 10px 0;
+}
+
+button:disabled {
+  background: #fff;
+  color: #ccc;
+  cursor: no-drop;
+}
+
+.form-confirmation {
+  font-weight: bold;
 }
