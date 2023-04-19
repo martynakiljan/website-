@@ -1,5 +1,5 @@
 /** @format */
-import "./lang.scss";
+import "./lang.scss"
 import React from "react";
 
 const Lang = ({ locale, isDeLang, selectLanguage }) => {
@@ -10,7 +10,7 @@ const Lang = ({ locale, isDeLang, selectLanguage }) => {
           EN
         </button>
       ) : (
-        <button className="lang" value="de" onClick={selectLanguage}>
+        <button className="lang" value="de-DE" onClick={selectLanguage}>
           DE
         </button>
       )}

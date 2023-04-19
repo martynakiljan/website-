@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/website-zweiMBau/static/css/main.dfcabd35.css",
-    "main.js": "/website-zweiMBau/static/js/main.98eded7f.js",
+    "main.js": "/website-zweiMBau/static/js/main.db5abef2.js",
     "static/media/team-photo-1.jpg": "/website-zweiMBau/static/media/team-photo-1.c49fd5e59c93549d800e.jpg",
     "static/media/slider-img-3.jpg": "/website-zweiMBau/static/media/slider-img-3.b4aa3d809deadc5aa57d.jpg",
     "static/media/slider-img-2.jpg": "/website-zweiMBau/static/media/slider-img-2.a4689a3bec6652677768.jpg",
@@ -27,10 +27,10 @@
     "static/media/logo-2023.png": "/website-zweiMBau/static/media/logo-2023.8e253b70b0ae59bd8472.png",
     "index.html": "/website-zweiMBau/index.html",
     "main.dfcabd35.css.map": "/website-zweiMBau/static/css/main.dfcabd35.css.map",
-    "main.98eded7f.js.map": "/website-zweiMBau/static/js/main.98eded7f.js.map"
+    "main.db5abef2.js.map": "/website-zweiMBau/static/js/main.db5abef2.js.map"
   },
   "entrypoints": [
     "static/css/main.dfcabd35.css",
-    "static/js/main.98eded7f.js"
+    "static/js/main.db5abef2.js"
   ]
 }

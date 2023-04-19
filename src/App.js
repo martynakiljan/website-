@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import Slider from "./components/Slider/Slider";
 import Services from "./components/Services/Services";
 import BeatLoader from "react-spinners/BeatLoader";
+import Counter from "./components/Counter/Counter";
 import Form from "./components/Form/Form";
 import Footer from "./components/Footer/Footer";
 import "./assets/styles/basic.scss";
@@ -18,13 +19,15 @@ import Deutsch from "../src/lang/deLang.json";
 import English from "../src/lang/enLang.json";
 const local = navigator.language;
 
-let lang = Deutsch;
+let lang;
 
 console.log(local);
 if (local === "de-DE") {
+  console.log("de");
   lang = Deutsch;
 } else {
   lang = English;
+  console.log("en");
 }
 
 const App = () => {
@@ -33,11 +36,15 @@ const App = () => {
 
   function selectLanguage(e) {
     const newLocale = e.target.value;
+    setLocale(newLocale);
     console.log(newLocale);
+
     if (newLocale === "de-DE") {
+      console.log("ok");
       setMessages(Deutsch);
     } else {
       setMessages(English);
+      console.log("ok2");
     }
   }
   const [loading, setLoading] = useState(false);
