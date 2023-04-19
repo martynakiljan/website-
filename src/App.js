@@ -18,7 +18,7 @@ import Deutsch from "../src/lang/deLang.json";
 import English from "../src/lang/enLang.json";
 const local = navigator.language;
 
-let lang;
+let lang = Deutsch;
 
 console.log(local);
 if (local === "de-DE") {
@@ -33,6 +33,7 @@ const App = () => {
 
   function selectLanguage(e) {
     const newLocale = e.target.value;
+    console.log(newLocale);
     if (newLocale === "de-DE") {
       setMessages(Deutsch);
     } else {
