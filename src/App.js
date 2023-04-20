@@ -54,14 +54,22 @@ const App = () => {
   function selectLanguage(e) {
     const newLocale = e.target.value;
     setLocale(newLocale);
-    console.log(newLocale);
 
-    if (newLocale === "de-DE") {
-      console.log("ok");
-      setMessages(Deutsch);
-    } else {
-      setMessages(English);
-      console.log("ok2");
+    switch (newLocale) {
+      case "de-DE":
+        setMessages(Deutsch);
+        break;
+      case "it":
+        setMessages(Deutsch);
+        break;
+      case "pl":
+        setMessages(Deutsch);
+        break;
+      case "en":
+        setMessages(English);
+        break;
+      default:
+        setMessages(English);
     }
   }
   const [loading, setLoading] = useState(false);
