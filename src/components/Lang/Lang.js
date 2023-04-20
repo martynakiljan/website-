@@ -4,7 +4,7 @@ import React from "react";
 
 const Lang = ({ locale, isDeLang, selectLanguage }) => {
   return (
-    <li className="menu__item-lang" value={locale}>
+    <li className="menu__item-lang lang" value={locale}>
       {isDeLang ? (
         <button className="lang" value="en" onClick={selectLanguage}>
           EN
