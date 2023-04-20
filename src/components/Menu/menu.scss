@@ -96,6 +96,11 @@
   align-items: center;
   align-items: baseline;
 
+
+  @include xs-max {
+    max-height: 40px;
+  }
+
   .nav__meta-icon-facebook {
     display: flex;
     justify-content: center;
