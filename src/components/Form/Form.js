@@ -17,7 +17,7 @@ import {
   validateTextArea,
 } from "../../utilis/validateInputs";
 import { FormattedMessage } from "react-intl";
-import { useForm} from "@formspree/react";
+import { useForm } from "@formspree/react";
 
 const Form = () => {
   const { fieldsConfig } = config;
@@ -27,7 +27,6 @@ const Form = () => {
     email: "",
     message: "",
   };
-  const [state, handleSubmit1] = useForm("contactForm");
   const [mailSent, setmailSent] = useState(false);
   const [error, setError] = useState(null);
   const [formData, setFormData] = useState(defaultFormData);
@@ -74,7 +73,6 @@ const Form = () => {
 
     if (isNotEmptyForm() || !isValidForm()) {
       event.preventDefault();
-
     }
   };
 
@@ -101,7 +99,7 @@ const Form = () => {
             <form
               className="form"
               ref={form}
-              action="http://localhost:3001/server.php"
+              action="https://formspree.io/f/mrgvrpnv"
               method="post"
             >
               {fieldsConfig.map(({ id, text, name }) => (
