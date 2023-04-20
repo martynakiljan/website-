@@ -36,7 +36,11 @@ html {
 }
 
 .section {
-  margin-top: 20px;
+  margin-top: 50px;
+
+  @include md-min {
+    margin-top: 0;
+  }
 
   &.form-container {
     margin-top: 40px
