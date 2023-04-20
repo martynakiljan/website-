@@ -8,11 +8,8 @@ import {
   faHouse,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
-import { inputs } from "../../utilis/formInputsArr";
 import FormInput from "./FormInput";
-import axios from "axios";
 import { config } from "../../utilis/formInputsArr";
-
 import {
   validateFirstName,
   validateLastName,
@@ -20,6 +17,7 @@ import {
   validateTextArea,
 } from "../../utilis/validateInputs";
 import { FormattedMessage } from "react-intl";
+import { useForm} from "@formspree/react";
 
 const Form = () => {
   const { fieldsConfig } = config;
@@ -29,6 +27,7 @@ const Form = () => {
     email: "",
     message: "",
   };
+  const [state, handleSubmit1] = useForm("contactForm");
   const [mailSent, setmailSent] = useState(false);
   const [error, setError] = useState(null);
   const [formData, setFormData] = useState(defaultFormData);
@@ -75,24 +74,7 @@ const Form = () => {
 
     if (isNotEmptyForm() || !isValidForm()) {
       event.preventDefault();
-      console.log("klik");
-      setIsFormCompleted(true);
-      axios({
-        method: "post",
-        url: form.attr("action"),
-        headers: { "content-type": "application/json" },
-        data: formData,
-      })
-        .then((result) => {
-          console.log(result.data);
-          if (result.data.sent) {
-            setmailSent(result.data.sent);
-            setError(false);
-          } else {
-            setError(true);
-          }
-        })
-        .catch((error) => setError(error.message));
+
     }
   };
 

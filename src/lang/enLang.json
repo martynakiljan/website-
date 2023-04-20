@@ -37,5 +37,14 @@
   "service-3-1": "Demolition work",
   "service-3-2": "Floor and wall coverings of all kinds",
   "service-3-3": "Painters of all kindst",
-  "form-confirmation": "Thanks! someone will contact you shortly."
+  "form-confirmation": "Thanks! someone will contact you shortly.",
+  "last-name-error": "test EN",
+  "form-label-1": "Fist Name:",
+  "form-label-2": "Last Name:",
+  "form-label-3": "Email:",
+  "form-label-4": "Message:",
+  "form-label-1-error": "first name must have at least 3 characters",
+  "form-label-2-error": "last name must have at least 3 characters",
+  "form-label-3-error": "invalid email",
+  "form-label-4-error": "write something!:"
 }

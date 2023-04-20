@@ -1,12 +1,11 @@
 /** @format */
-
+import { FormspreeProvider } from "@formspree/react";
 import React, { useState, useEffect } from "react";
 import Header from "./components/Header/Header";
 import About from "./components/About/About";
 import Slider from "./components/Slider/Slider";
 import Services from "./components/Services/Services";
 import BeatLoader from "react-spinners/BeatLoader";
-import Counter from "./components/Counter/Counter";
 import Form from "./components/Form/Form";
 import Footer from "./components/Footer/Footer";
 import "./assets/styles/basic.scss";
@@ -17,7 +16,9 @@ import Context from "./utilis/context";
 import { IntlProvider } from "react-intl";
 import Deutsch from "../src/lang/deLang.json";
 import English from "../src/lang/enLang.json";
+import { useForm } from "@formspree/react";
 const local = navigator.language;
+
 
 let lang;
 
@@ -58,27 +59,29 @@ const App = () => {
 
   return (
     <Context.Provider value={{ locale, selectLanguage }}>
-      <IntlProvider messages={messages} locale={locale}>
-        {loading ? (
-          <div className="beatloader">
-            <BeatLoader color={"#f6ce4a"} loading={loading} size={10} />
-          </div>
-        ) : (
-          <div>
-            <Header />
-            <div className="page">
-              <div className="page__inner">
-                <About />
-                <Services />
-                <Slider />
-              </div>
+      <FormspreeProvider project="{mqkowpnq}">
+        <IntlProvider messages={messages} locale={locale}>
+          {loading ? (
+            <div className="beatloader">
+              <BeatLoader color={"#f6ce4a"} loading={loading} size={10} />
             </div>
-            <Form />
-            <ScrollToTop smooth />
-            <Footer />
-          </div>
-        )}
-      </IntlProvider>
+          ) : (
+            <div>
+              <Header />
+              <div className="page">
+                <div className="page__inner">
+                  <About />
+                  <Services />
+                  <Slider />
+                </div>
+              </div>
+              <Form />
+              <ScrollToTop smooth />
+              <Footer />
+            </div>
+          )}
+        </IntlProvider>
+      </FormspreeProvider>
     </Context.Provider>
   );
 };
