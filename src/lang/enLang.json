@@ -46,5 +46,6 @@
   "form-label-1-error": "first name must have at least 3 characters",
   "form-label-2-error": "last name must have at least 3 characters",
   "form-label-3-error": "invalid email",
-  "form-label-4-error": "write something!:"
+  "form-label-4-error": "write something!:",
+  "slider-title": "our Work:"
 }

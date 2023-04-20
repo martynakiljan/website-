@@ -44,5 +44,6 @@
   "form-label-1-error": "Vorname muss mindestens 3 Zeichen lang sein",
   "form-label-2-error": "Nachname muss mindestens 3 Zeichen lang sein",
   "form-label-3-error": "ungültige E-Mai",
-  "form-label-4-error": "schreib was!"
+  "form-label-4-error": "schreib was!",
+  "slider-title": "unsere Arbeit:"
 }
