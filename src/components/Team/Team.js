@@ -4,7 +4,7 @@ import "./team.scss";
 import { FormattedMessage } from "react-intl";
 const Team = () => {
   return (
-    <div class="team section">
+    <div className ="team section">
       <h2 className="team__title title about__left-title">
         <FormattedMessage id="team-title"></FormattedMessage>
         <span>team</span>

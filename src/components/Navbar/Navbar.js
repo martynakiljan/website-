@@ -31,7 +31,7 @@ const Navbar = () => {
   }, [locale]);
 
   return (
-    <Context.Provider>
+    <Context.Provider value={{ locale, selectLanguage }}>
       <div className="nav">
         <div className="nav__inner">
           <div className="nav__logo-burger">
@@ -49,9 +49,12 @@ const Navbar = () => {
           </div>
           <div className="nav__meta">
             <div className="nav__meta-item nav__meta-fac-lan">
-              <div className="nav__meta-icon nav__meta-icon-facebook">
+              <a
+                className="nav__meta-icon nav__meta-icon-facebook"
+                href="https://www.facebook.com/profile.php?id=100092228163687"
+              >
                 <FontAwesomeIcon icon={faFacebookF} />
-              </div>
+              </a>
               <Lang
                 isDeLang={isDeLang}
                 selectLanguage={selectLanguage}

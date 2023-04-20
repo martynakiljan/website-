@@ -12,6 +12,7 @@ const Slider = () => {
       preventMovementUntilSwipeScrollTolerance={true}
       swipeScrollTolerance={100}
       infiniteLoop={true}
+      showThumbs={false}
     >
       <div className="slider__img slider__img-1"></div>
       <div className="slider__img slider__img-2"></div>

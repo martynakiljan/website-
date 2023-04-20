@@ -74,15 +74,17 @@ const Form = () => {
     event.preventDefault();
 
     if (isNotEmptyForm() || !isValidForm()) {
+      event.preventDefault();
       console.log("klik");
       setIsFormCompleted(true);
       axios({
         method: "post",
-        url: `${process.env.REACT_APP_API}`,
+        url: form.attr("action"),
         headers: { "content-type": "application/json" },
         data: formData,
       })
         .then((result) => {
+          console.log(result.data);
           if (result.data.sent) {
             setmailSent(result.data.sent);
             setError(false);
@@ -114,7 +116,12 @@ const Form = () => {
       <div className="form-container section" id="contact">
         <div className="form__inner">
           <div className="form__inner--inner">
-            <form action="#" className="form" ref={form}>
+            <form
+              className="form"
+              ref={form}
+              action="http://localhost:3001/server.php"
+              method="post"
+            >
               {fieldsConfig.map(({ id, text, name }) => (
                 <FormInput
                   key={id}

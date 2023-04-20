@@ -28,7 +28,7 @@ const Menu = ({ isOpen, locale, isDeLang, selectLanguage, setIsOpen }) => {
   }, [setIsOpen]);
 
   return (
-    <Context.Provider>
+    <Context.Provider value={{ locale, selectLanguage }}>
       <div className="menu-mobile" ref={ref}>
         {isOpen && (
           <div
@@ -65,9 +65,12 @@ const Menu = ({ isOpen, locale, isDeLang, selectLanguage, setIsOpen }) => {
                     locale={locale}
                     className="item"
                   />
-                  <div className="nav__meta-icon nav__meta-icon-facebook item">
+                  <a
+                    className="nav__meta-icon nav__meta-icon-facebook item"
+                    href="https://www.facebook.com/profile.php?id=100092228163687"
+                  >
                     <FontAwesomeIcon icon={faFacebookF} />
-                  </div>
+                  </a>
                 </div>
               </ul>
             </div>
