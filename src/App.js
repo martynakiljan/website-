@@ -1,4 +1,5 @@
 /** @format */
+
 import { FormspreeProvider } from "@formspree/react";
 import React, { useState, useEffect } from "react";
 import Header from "./components/Header/Header";
@@ -16,20 +17,35 @@ import Context from "./utilis/context";
 import { IntlProvider } from "react-intl";
 import Deutsch from "../src/lang/deLang.json";
 import English from "../src/lang/enLang.json";
-import { useForm } from "@formspree/react";
 const local = navigator.language;
-
 
 let lang;
 
-console.log(local);
-if (local === "de-DE") {
-  console.log("de");
-  lang = Deutsch;
-} else {
-  lang = English;
-  console.log("en");
+switch (local) {
+  case "de-DE":
+    lang = Deutsch;
+    break;
+  case "it":
+    lang = Deutsch;
+    break;
+  case "pl":
+    lang = Deutsch;
+    break;
+  case "en":
+    lang = English;
+    break;
+  default:
+    lang = English;
 }
+
+// console.log(local);
+// if (local === "de-DE") {
+//   console.log("de");
+//   lang = Deutsch;
+// } else {
+//   lang = English;
+//   console.log("en");
+// }
 
 const App = () => {
   const [locale, setLocale] = useState(local);
