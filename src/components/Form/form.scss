@@ -37,6 +37,7 @@ h4.form__title {
     max-width: var(--max-width);
     margin: 0 auto;
     padding-left: 20px;
+    padding-top: 40px;
 
     &:after {
       margin-left: 20px;
@@ -151,6 +152,7 @@ h4.form__title {
     @include md-min {
       flex-direction: row;
       margin-left: 0 !important;
+      padding-bottom: 30px;
     }
 
     @include sm-min {
