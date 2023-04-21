@@ -1,7 +1,7 @@
 /** @format */
 import "./about.scss";
 import React from "react";
-import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Fade";
 import Team from "../Team/Team";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesRight, faAnglesLeft } from "@fortawesome/free-solid-svg-icons";
@@ -26,7 +26,6 @@ const About = () => {
               <FontAwesomeIcon icon={faAnglesLeft} />
               <span className="about__quote-text">
                 <FormattedMessage id="quote"></FormattedMessage>
-
               </span>
               <FontAwesomeIcon icon={faAnglesRight} />
             </p>
@@ -41,29 +40,31 @@ const About = () => {
         </h2>
         <div className="about-distinction-tiles">
           <div className="about-distinction-tiles__inner">
-            <div className="about-distinction-tile about-distinction-tile__first">
-              <div className="about-distinction-tile__mask"></div>
-              <Fade left>
+            <Zoom left>
+              <div className="about-distinction-tile about-distinction-tile__first">
+                <div className="about-distinction-tile__mask"></div>
                 <div className="about-distinction-tile__content">
                   <h3 className="about-distinction-tile__title">
                     {" "}
                     <FormattedMessage id="distinctions-text-1"></FormattedMessage>
                   </h3>
                 </div>
-              </Fade>
-            </div>
-
-            <div className="about-distinction-tile about-distinction-tile__second">
-              <div className="about-distinction-tile__mask"></div>
-              <div className="about-distinction-tile__content">
-                <h3 className="about-distinction-tile__title">
-                  {" "}
-                  <FormattedMessage id="distinctions-text-2"></FormattedMessage>
-                </h3>
               </div>
-            </div>
+            </Zoom>
 
-            <Fade right>
+            <Zoom right>
+              <div className="about-distinction-tile about-distinction-tile__second">
+                <div className="about-distinction-tile__mask"></div>
+                <div className="about-distinction-tile__content">
+                  <h3 className="about-distinction-tile__title">
+                    {" "}
+                    <FormattedMessage id="distinctions-text-2"></FormattedMessage>
+                  </h3>
+                </div>
+              </div>
+            </Zoom>
+
+            <Zoom left>
               <div className="about-distinction-tile about-distinction-tile__third">
                 <div className="about-distinction-tile__mask"></div>
                 <div className="about-distinction-tile__content">
@@ -73,7 +74,7 @@ const About = () => {
                   </h3>
                 </div>
               </div>
-            </Fade>
+            </Zoom>
           </div>
         </div>
       </div>

@@ -17,7 +17,7 @@ import { IntlProvider } from "react-intl";
 import Deutsch from "../src/lang/deLang.json";
 import English from "../src/lang/enLang.json";
 
-const local = navigator.language;
+// const local = navigator.language;
 
 
 const App = () => {
