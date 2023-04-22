@@ -1,7 +1,9 @@
 @import '../../assets/styles/helper-mixin.scss';
 
 div.team {
-  margin-top: 20px;
+  margin-top: 0px;
+
+
 }
 
 .team__inner {
@@ -9,7 +11,7 @@ div.team {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  padding-top: 20px;
+  padding-top: 30px;
 
   @include md-min {
     min-height: 60vh;

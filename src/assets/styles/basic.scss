@@ -14,7 +14,7 @@
 
 html {
   overflow-y: scroll;
-  scroll-padding-top: 78px;
+  scroll-padding-top: 100px;
 }
 
 * {
@@ -38,13 +38,6 @@ html {
 .section {
   margin-top: 50px;
 
-  @include md-min {
-    margin-top: 0;
-  }
-
-  &.form-container {
-    margin-top: 40px
-  }
 }
 
 .page__inner {
