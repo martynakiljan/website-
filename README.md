@@ -3,7 +3,7 @@
 
 -------
 
-technologies: React, sass, node, js 
+technologies: react, sass, node, js 
 
 :arrow_forward: LIVE https://martynakiljan.github.io/website-zweiMBau/
 
