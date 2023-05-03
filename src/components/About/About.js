@@ -32,7 +32,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Team />
+      {/* <Team /> */}
       <div className="about__inner--second section">
         <h2 className="title about__left-title">
           {" "}
