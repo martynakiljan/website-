@@ -5,7 +5,7 @@
 
 technologies: react, sass, node, js 
 
-:arrow_forward: LIVE https://martynakiljan.github.io/website-zweiMBau/
+:arrow_forward: LIVE https://zweimbau.ch/
 
 <h3>How to open a file? :eyes: </h3>
 
