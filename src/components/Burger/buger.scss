@@ -4,6 +4,7 @@
 .hamburger-react {
   display: none;
   z-index: 1000;
+  margin-right: -8px !important;
 
   @include md-max {
     display: block;

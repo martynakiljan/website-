@@ -26,11 +26,11 @@ const About = () => {
         <div className="about__right-side about__right-side">
           <div className="about__inner-quote">
             <p className="about__quote-text">
-              <FontAwesomeIcon icon={faAnglesLeft} />
+              <FontAwesomeIcon icon={faAnglesRight} />
               <span className="about__quote-text">
                 <FormattedMessage id="quote"></FormattedMessage>
               </span>
-              <FontAwesomeIcon icon={faAnglesRight} />
+              <FontAwesomeIcon icon={faAnglesLeft} />
             </p>
           </div>
         </div>
