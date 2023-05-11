@@ -7,8 +7,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesRight, faAnglesLeft } from "@fortawesome/free-solid-svg-icons";
 /** @format */
 import { FormattedMessage } from "react-intl";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const About = () => {
+  const matches = useMediaQuery("(min-width:992px)");
+
   return (
     <div className="about section" id="about">
       <div className="about__inner">
@@ -40,41 +43,83 @@ const About = () => {
         </h2>
         <div className="about-distinction-tiles">
           <div className="about-distinction-tiles__inner">
-            <Zoom left>
-              <div className="about-distinction-tile about-distinction-tile__first">
-                <div className="about-distinction-tile__mask"></div>
-                <div className="about-distinction-tile__content">
-                  <h3 className="about-distinction-tile__title">
-                    {" "}
-                    <FormattedMessage id="distinctions-text-1"></FormattedMessage>
-                  </h3>
-                </div>
-              </div>
-            </Zoom>
+            {matches ? (
+              <>
+                <Zoom left>
+                  <div className="about-distinction-tile about-distinction-tile__first">
+                    <div className="about-distinction-tile__mask"></div>
+                    <div className="about-distinction-tile__content">
+                      <h3 className="about-distinction-tile__title">
+                        {" "}
+                        <FormattedMessage id="distinctions-text-1"></FormattedMessage>
+                      </h3>
+                    </div>
+                  </div>
+                </Zoom>
 
-            <Zoom right>
-              <div className="about-distinction-tile about-distinction-tile__second">
-                <div className="about-distinction-tile__mask"></div>
-                <div className="about-distinction-tile__content">
-                  <h3 className="about-distinction-tile__title">
-                    {" "}
-                    <FormattedMessage id="distinctions-text-2"></FormattedMessage>
-                  </h3>
-                </div>
-              </div>
-            </Zoom>
+                <Zoom>
+                  <div className="about-distinction-tile about-distinction-tile__second">
+                    <div className="about-distinction-tile__mask"></div>
+                    <div className="about-distinction-tile__content">
+                      <h3 className="about-distinction-tile__title">
+                        {" "}
+                        <FormattedMessage id="distinctions-text-2"></FormattedMessage>
+                      </h3>
+                    </div>
+                  </div>
+                </Zoom>
 
-            <Zoom left>
-              <div className="about-distinction-tile about-distinction-tile__third">
-                <div className="about-distinction-tile__mask"></div>
-                <div className="about-distinction-tile__content">
-                  <h3 className="about-distinction-tile__title">
-                    {" "}
-                    <FormattedMessage id="distinctions-text-3"></FormattedMessage>
-                  </h3>
-                </div>
-              </div>
-            </Zoom>
+                <Zoom right>
+                  <div className="about-distinction-tile about-distinction-tile__third">
+                    <div className="about-distinction-tile__mask"></div>
+                    <div className="about-distinction-tile__content">
+                      <h3 className="about-distinction-tile__title">
+                        {" "}
+                        <FormattedMessage id="distinctions-text-3"></FormattedMessage>
+                      </h3>
+                    </div>
+                  </div>
+                </Zoom>
+              </>
+            ) : (
+              <>
+                <Zoom left>
+                  <div className="about-distinction-tile about-distinction-tile__first">
+                    <div className="about-distinction-tile__mask"></div>
+                    <div className="about-distinction-tile__content">
+                      <h3 className="about-distinction-tile__title">
+                        {" "}
+                        <FormattedMessage id="distinctions-text-1"></FormattedMessage>
+                      </h3>
+                    </div>
+                  </div>
+                </Zoom>
+
+                <Zoom right>
+                  <div className="about-distinction-tile about-distinction-tile__second">
+                    <div className="about-distinction-tile__mask"></div>
+                    <div className="about-distinction-tile__content">
+                      <h3 className="about-distinction-tile__title">
+                        {" "}
+                        <FormattedMessage id="distinctions-text-2"></FormattedMessage>
+                      </h3>
+                    </div>
+                  </div>
+                </Zoom>
+
+                <Zoom left>
+                  <div className="about-distinction-tile about-distinction-tile__third">
+                    <div className="about-distinction-tile__mask"></div>
+                    <div className="about-distinction-tile__content">
+                      <h3 className="about-distinction-tile__title">
+                        {" "}
+                        <FormattedMessage id="distinctions-text-3"></FormattedMessage>
+                      </h3>
+                    </div>
+                  </div>
+                </Zoom>
+              </>
+            )}
           </div>
         </div>
       </div>
