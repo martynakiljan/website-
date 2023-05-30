@@ -20,4 +20,3 @@ technologies: react, sass, node, js
 <img width="1232" alt="Zrzut ekranu 2023-04-24 o 19 47 06" src="https://user-images.githubusercontent.com/59742201/234076586-004a2fbd-df6c-4932-bb5b-b67eb56605ad.png">
 
 
-<img width="1232" alt="Zrzut ekranu 2023-04-24 o 19 47 06" src="https://user-images.githubusercontent.com/59742201/234075781-5301757d-bd73-4c75-aff5-593075050992.png">
