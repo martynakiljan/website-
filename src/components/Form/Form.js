@@ -144,12 +144,6 @@ const Form = () => {
                 <div className="form__meta-text">
                   <a
                     className="form__meta-text form__meta-phone"
-                    href="tel:+41779280504"
-                  >
-                    +41 77 928 05 04
-                  </a>
-                  <a
-                    className="form__meta-text form__meta-phone"
                     href="tel: +41779475177"
                   >
                     +41 77 947 51 77
