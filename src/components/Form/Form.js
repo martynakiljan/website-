@@ -169,10 +169,10 @@ const Form = () => {
                 </div>
                 <div className="form__meta-text">
                   <p className="form__meta-text form__meta-address">
-                    Zentralstrasse 1c
+                    Wydeweg 10
                   </p>
                   <p className="form__meta-text form__meta-address-street">
-                    5623 Boswil
+                    5620 Bremgarten
                   </p>
                 </div>
               </div>{" "}

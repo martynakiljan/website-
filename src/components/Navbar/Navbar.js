@@ -51,7 +51,7 @@ const Navbar = () => {
             <div className="nav__meta-item nav__meta-fac-lan">
               <a
                 className="nav__meta-icon nav__meta-icon-facebook"
-                href="https://www.facebook.com/profile.php?id=100092228163687"
+                href="https://www.facebook.com/profile.php?id=100092306658254"
               >
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>

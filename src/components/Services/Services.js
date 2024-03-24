@@ -3,7 +3,7 @@ import "./services.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBuilding,
-  faHammer,
+  faTrowel,
   faPaintRoller,
 } from "@fortawesome/free-solid-svg-icons";
 import { FormattedMessage } from "react-intl";
@@ -26,16 +26,9 @@ const Services = () => {
             <ul>
               <li>
                 {" "}
-                <FormattedMessage id="service-1-1"></FormattedMessage>
-              </li>
-              <li>
-                {" "}
                 <FormattedMessage id="service-1-2"></FormattedMessage>
               </li>
-              <li>
-                {" "}
-                <FormattedMessage id="service-1-3"></FormattedMessage>
-              </li>
+
               <li>
                 {" "}
                 <FormattedMessage id="service-1-4"></FormattedMessage>
@@ -59,7 +52,7 @@ const Services = () => {
             </ul>
           </div>
           <div className="services__service">
-            <FontAwesomeIcon icon={faPaintRoller} />
+            <FontAwesomeIcon icon={faTrowel} />
             <div className="services__inner-text">
               <p className="services-title">
                 <FormattedMessage id="service-title-2"></FormattedMessage>
@@ -71,38 +64,22 @@ const Services = () => {
                 </li>
                 <li>
                   {" "}
-                  <FormattedMessage id="service-2-2"></FormattedMessage>
-                </li>
-                <li>
-                  {" "}
                   <FormattedMessage id="service-2-3"></FormattedMessage>
                 </li>
                 <li>
                   {" "}
                   <FormattedMessage id="service-2-4"></FormattedMessage>
                 </li>
-                <li>
-                  {" "}
-                  <FormattedMessage id="service-2-5"></FormattedMessage>
-                </li>
               </ul>
             </div>
           </div>
           <div className="services__service">
-            <FontAwesomeIcon icon={faHammer} />
+            <FontAwesomeIcon icon={faPaintRoller} />
             <div className="services__inner-text">
               <p className="services-title">
                 <FormattedMessage id="service-title-3"></FormattedMessage>
               </p>
               <ul>
-                <li>
-                  {" "}
-                  <FormattedMessage id="service-3-1"></FormattedMessage>
-                </li>
-                <li>
-                  {" "}
-                  <FormattedMessage id="service-3-2"></FormattedMessage>
-                </li>
                 <li>
                   {" "}
                   <FormattedMessage id="service-3-3"></FormattedMessage>

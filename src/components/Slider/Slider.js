@@ -30,6 +30,8 @@ const Slider = () => {
         <div className="slider__img slider__img-10"></div>
         <div className="slider__img slider__img-11"></div>
         <div className="slider__img slider__img-12"></div>
+        <div className="slider__img slider__img-13"></div>
+        <div className="slider__img slider__img-15"></div>
       </Carousel>
     </>
   );

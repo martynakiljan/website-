@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="footer__inner">
           {" "}
           <FontAwesomeIcon icon={faCopyright} className="footer-copyright" />
-          <p>2023</p>
+          <p>2024</p>
           <span className="footer-company-name"> ZweiM Bau</span>
         </div>
       </footer>
