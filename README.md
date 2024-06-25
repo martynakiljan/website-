@@ -5,7 +5,7 @@
 
 technologies: react, sass, node, js 
 
-:arrow_forward: LIVE https://zweimbau.ch/
+:arrow_forward: LIVE https://www.bogdan-gipser.ch
 
 <h3>How to open a file? :eyes: </h3>
 
@@ -17,6 +17,6 @@ technologies: react, sass, node, js
 * then you can start *npm start*
 
 
-<img width="1232" alt="Zrzut ekranu 2023-04-24 o 19 47 06" src="https://user-images.githubusercontent.com/59742201/234076586-004a2fbd-df6c-4932-bb5b-b67eb56605ad.png">
+<img width="1455" alt="Bildschirmfoto 2024-06-25 um 19 36 03" src="https://github.com/martynakiljan/website-bogdan-gipser/assets/59742201/72eb1ba7-1fbc-49f3-9b05-6c2fbbbe1077">
 
 
