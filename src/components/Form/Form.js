@@ -157,9 +157,9 @@ const Form = () => {
                 <div className="form__meta-text">
                   <a
                     className="form__meta-text form__meta-email"
-                    href="mailto:info@zweimbau.ch"
+                    href="mailto:info@bogdan-gipser.ch"
                   >
-                    info@zweimbau.ch
+                    info@bogdan-gipser.ch
                   </a>
                 </div>
               </div>

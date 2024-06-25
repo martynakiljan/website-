@@ -12,7 +12,7 @@ const Footer = () => {
           {" "}
           <FontAwesomeIcon icon={faCopyright} className="footer-copyright" />
           <p>2024</p>
-          <span className="footer-company-name"> ZweiM Bau</span>
+          <span className="footer-company-name"> Bogdan Gipser GmbH </span>
         </div>
       </footer>
     </>
